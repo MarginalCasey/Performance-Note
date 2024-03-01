@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   const renderRoutes = (list: Route[], baseUrl: string) => (
     <List>
-      {list.map(({ name, path, pages }) => {
+      {list.map(({ name, path, isVisitable, pages }) => {
         const url = `${baseUrl}/${path}`;
 
         if (pages) {
@@ -17,9 +17,13 @@ const Sidebar = () => {
             <AccordionItem
               key={url}
               header={
-                <a href={url} className="hover:underline">
-                  {name}
-                </a>
+                isVisitable ? (
+                  <a href={url} className="hover:underline">
+                    {name}
+                  </a>
+                ) : (
+                  name
+                )
               }
               selected={pathname.startsWith(url)}
               open={pathname.startsWith(url)}
