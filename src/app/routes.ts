@@ -4,6 +4,17 @@ export interface Route {
   pages?: Route[];
 }
 
-const routes: Route[] = [];
+const routes: Route[] = [
+  {
+    name: "Core Web Vitals",
+    path: "core-web-vitals",
+    pages: [
+      {
+        name: "Large Contentful Paint (LCP)",
+        path: "lcp",
+      },
+    ],
+  },
+];
 
 export default routes;
