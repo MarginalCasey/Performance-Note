@@ -1,5 +1,6 @@
 export interface Route {
   name: string;
+  demo?: boolean;
   path: string;
   isVisitable?: boolean;
   pages?: Route[];
@@ -23,26 +24,32 @@ const routes: Route[] = [
               {
                 name: "包含文字節點或是其他行內文字元素的區塊元素",
                 path: "text",
+                demo: true,
               },
               {
                 name: "<img>",
                 path: "img",
+                demo: true,
               },
               {
                 name: "<svg> 裡面的 <image>",
                 path: "svg-image",
+                demo: true,
               },
               {
                 name: "透過 url() 載入的 background image",
                 path: "background-image",
+                demo: true,
               },
               {
                 name: "<video> 的 poster 封面圖",
                 path: "video-poster",
+                demo: true,
               },
               {
                 name: "自動播放的 <video> 所繪製的第一個 frame",
                 path: "video-autoplay-frame",
+                demo: true,
               },
             ],
           },

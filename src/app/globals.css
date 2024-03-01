@@ -71,7 +71,26 @@
     @apply font-semibold;
   }
 
-  main a {
+  .container {
+    @apply flex;
+    @apply h-screen;
+    max-width: revert !important;
+  }
+
+  .main {
+    @apply flex-1;
+    @apply overflow-y-auto;
+  }
+
+  .content {
+    @apply mt-[18vh];
+    @apply mb-[30vh];
+    @apply px-4;
+    @apply max-w-3xl;
+    @apply mx-auto;
+  }
+
+  .content a {
     @apply text-gray-500;
     @apply underline;
   }

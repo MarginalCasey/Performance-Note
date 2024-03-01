@@ -1,4 +1,3 @@
-import Template from "@/app/template";
 import type { Metadata } from "next";
 import "../globals.css";
 
@@ -14,9 +13,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
-        <Template>{children}</Template>
-      </body>
+      <body className="content">{children}</body>
     </html>
   );
 }
