@@ -7,7 +7,7 @@ const BackgroundImage = () => {
         style={{
           width: 640,
           height: 426,
-          backgroundImage: `url("https://learn-performance-images.glitch.me/images/image-640-uncompressed.jpg?v=2&time=${Date.now()}")`,
+          backgroundImage: `url("/image-640-uncompressed.jpg?v=2&time=${Date.now()}")`,
         }}
       />
       <LCP />

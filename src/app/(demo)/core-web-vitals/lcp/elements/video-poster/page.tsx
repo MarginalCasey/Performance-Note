@@ -7,7 +7,7 @@ const VideoPoster = () => {
         controls
         width="1920"
         height="1080"
-        poster={`https://learn-performance-images.glitch.me/images/image-640-uncompressed.jpg?v=2&time=${Date.now()}`}
+        poster={`/image-640-uncompressed.jpg?v=2&time=${Date.now()}`}
       >
         <source
           type="video/mp4"
