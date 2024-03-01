@@ -9,7 +9,7 @@ const Sidebar = () => {
 
   const renderRoutes = (list: Route[], baseUrl: string) => (
     <List>
-      {list.map(({ name, path, isVisitable, pages }) => {
+      {list.map(({ name, path, isVisitable = true, pages }) => {
         const url = `${baseUrl}/${path}`;
 
         if (pages) {

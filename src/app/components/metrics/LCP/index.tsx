@@ -28,28 +28,27 @@ export default function LCP() {
     }
   }, [lcp?.attribution.element]);
 
+  if (!lcp) {
+    return null;
+  }
+
   return (
     <div>
       <h1>LCP</h1>
-      {lcp && (
-        <>
-          <div>value: {Math.round(lcp.value)}</div>
-          <div>rating: {lcp.rating}</div>
-          <div>
-            Time to first byte: {Math.round(lcp.attribution.timeToFirstByte)}
-          </div>
-          <div>
-            Resource load delay: {Math.round(lcp.attribution.resourceLoadDelay)}
-          </div>
-          <div>
-            Resource load time: {Math.round(lcp.attribution.resourceLoadTime)}
-          </div>
-          <div>
-            Element render delay:{" "}
-            {Math.round(lcp.attribution.elementRenderDelay)}
-          </div>
-        </>
-      )}
+      <div>value: {Math.round(lcp.value)}</div>
+      <div>rating: {lcp.rating}</div>
+      <div>
+        Time to first byte: {Math.round(lcp.attribution.timeToFirstByte)}
+      </div>
+      <div>
+        Resource load delay: {Math.round(lcp.attribution.resourceLoadDelay)}
+      </div>
+      <div>
+        Resource load time: {Math.round(lcp.attribution.resourceLoadTime)}
+      </div>
+      <div>
+        Element render delay: {Math.round(lcp.attribution.elementRenderDelay)}
+      </div>
     </div>
   );
 }
