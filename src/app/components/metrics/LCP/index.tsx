@@ -21,14 +21,19 @@ export default function LCP() {
         /[[\]]/g,
         (match) => `\\${match}`,
       );
-      const element: HTMLElement | null = document.querySelector(selector);
 
-      if (element) {
-        element.classList.add("border-4", "border-red-500");
+      try {
+        const element: HTMLElement | null = document.querySelector(selector);
 
-        return () => {
-          element.classList.remove("border-4", "border-red-500");
-        };
+        if (element) {
+          element.classList.add("border-4", "border-red-500");
+
+          return () => {
+            element.classList.remove("border-4", "border-red-500");
+          };
+        }
+      } catch (error) {
+        console.error(error);
       }
     }
   }, [lcp?.attribution.element]);
