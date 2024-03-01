@@ -43,7 +43,7 @@ const Sidebar = () => {
   );
 
   return (
-    <div className="bg-gray-50 font-medium">
+    <div className="overflow-y-auto w-80 bg-gray-50 font-medium">
       <div className="p-4">
         <a href="/">
           <Typography variant="h5" color="blue-gray" className="font-bold">
@@ -51,7 +51,7 @@ const Sidebar = () => {
           </Typography>
         </a>
       </div>
-      {renderRoutes(routes, "")}
+      <div className="px-4">{renderRoutes(routes, "")}</div>
     </div>
   );
 };

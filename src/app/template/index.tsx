@@ -10,6 +10,11 @@ const Template: FC<{ children: ReactNode }> = ({ children }) => {
     list: {
       styles: {
         base: {
+          list: {
+            minWidth: "min-w-auto",
+            p: "py-2",
+            fontSize: "text-sm",
+          },
           item: {
             initial: {
               color:
