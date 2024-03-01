@@ -32,21 +32,35 @@ const lcp = () => {
         <section>
           <h4>哪些元素會列入考量</h4>
           <ul>
-            <li>包含文字節點或是其他行內文字元素的區塊元素</li>
             <li>
-              <code>{"<img>"}</code>
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/text">
+                包含文字節點或是其他行內文字元素的區塊元素
+              </InnerLink>
             </li>
             <li>
-              <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/img">
+                <code>{"<img>"}</code>
+              </InnerLink>
             </li>
             <li>
-              透過 <code>url()</code> 載入的 background image
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/svg-image">
+                <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
+              </InnerLink>
             </li>
             <li>
-              <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/background-image">
+                透過 <code>url()</code> 載入的 background image
+              </InnerLink>
             </li>
             <li>
-              自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/video-poster">
+                <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
+              </InnerLink>
+            </li>
+            <li>
+              <InnerLink href="/demo/core-web-vitals/lcp/elements/video-autoplay-frame">
+                自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
+              </InnerLink>
             </li>
           </ul>
         </section>
