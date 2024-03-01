@@ -4,7 +4,7 @@ const theme = {
       base: {
         list: {
           minWidth: "min-w-auto",
-          p: "py-2",
+          p: "py-0",
           fontSize: "text-sm",
         },
         item: {
