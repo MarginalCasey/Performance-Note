@@ -25,8 +25,8 @@ const Sidebar = () => {
                   name
                 )
               }
-              selected={pathname.startsWith(url)}
-              open={pathname.startsWith(url)}
+              selected={pathname === url}
+              open={pathname.startsWith(`${url}/`)}
             >
               {renderRoutes(pages, url)}
             </AccordionItem>
@@ -35,7 +35,7 @@ const Sidebar = () => {
 
         return (
           <a key={url} href={url} className="hover:underline">
-            <ListItem selected={pathname.startsWith(url)}>{name}</ListItem>
+            <ListItem selected={pathname === url}>{name}</ListItem>
           </a>
         );
       })}
