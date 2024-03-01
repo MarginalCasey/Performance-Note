@@ -7,7 +7,12 @@ export default function LCP() {
   const [lcp, setLCP] = useState<LCPMetricWithAttribution>();
 
   useEffect(() => {
-    onLCP(setLCP, { reportAllChanges: true });
+    onLCP(
+      (data) => {
+        setLCP({ ...data });
+      },
+      { reportAllChanges: true },
+    );
   }, []);
 
   useEffect(() => {
