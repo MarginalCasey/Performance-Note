@@ -77,6 +77,10 @@
     max-width: revert !important;
   }
 
+  .sidebar a {
+    @apply hover:underline;
+  }
+
   .main {
     @apply flex-1;
     @apply overflow-y-auto;

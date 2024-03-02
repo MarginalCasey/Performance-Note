@@ -1,6 +1,7 @@
 import Alert from "@/app/components/Alert";
 import CodePreview from "@/app/components/CodePreview";
 import InnerLink from "@/app/components/InnerLink";
+import { CORE_WEB_VITALS } from "@/app/path";
 
 const lcp = () => {
   return (
@@ -33,32 +34,36 @@ const lcp = () => {
           <h4>哪些元素會列入考量</h4>
           <ul>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/text">
+              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}>
                 包含文字節點或是其他行內文字元素的區塊元素
               </InnerLink>
             </li>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/img">
+              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}>
                 <code>{"<img>"}</code>
               </InnerLink>
             </li>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/svg-image">
+              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}>
                 <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
               </InnerLink>
             </li>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/background-image">
+              <InnerLink
+                href={CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH}
+              >
                 透過 <code>url()</code> 載入的 background image
               </InnerLink>
             </li>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/video-poster">
+              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}>
                 <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
               </InnerLink>
             </li>
             <li>
-              <InnerLink href="/demo/core-web-vitals/lcp/elements/video-autoplay-frame">
+              <InnerLink
+                href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_AUTOPLAY_FRAME.PATH}
+              >
                 自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
               </InnerLink>
             </li>
