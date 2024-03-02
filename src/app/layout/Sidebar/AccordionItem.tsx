@@ -5,22 +5,29 @@ import {
   AccordionHeader,
   ListItem,
 } from "@material-tailwind/react";
+import { usePathname } from "next/navigation";
 import type { FC } from "react";
 import { ReactNode, useState } from "react";
 
 interface AccordionItemProps {
-  open?: boolean;
-  selected?: boolean;
-  header: ReactNode;
+  text: string;
+  path: string;
+  visitable?: boolean;
   children: ReactNode;
 }
 
 const AccordionItem: FC<AccordionItemProps> = ({
-  open,
-  selected,
-  header,
+  text,
+  path,
+  visitable = false,
   children,
 }) => {
+  const pathname = usePathname();
+  const open =
+    pathname === path ||
+    pathname.startsWith(`${path}/`) ||
+    pathname.startsWith(`/demo${path}/`);
+
   const [openState, setOpenState] = useState(open ?? false);
 
   const onAccordionClick = () => {
@@ -37,9 +44,9 @@ const AccordionItem: FC<AccordionItemProps> = ({
         />
       }
     >
-      <ListItem className="p-0" selected={selected}>
+      <ListItem className="p-0" selected={pathname === path}>
         <AccordionHeader onClick={onAccordionClick} className="border-b-0 p-3">
-          {header}
+          {visitable ? <a href={path}>{text}</a> : text}
         </AccordionHeader>
       </ListItem>
       <AccordionBody className="py-1 pl-4">{children}</AccordionBody>

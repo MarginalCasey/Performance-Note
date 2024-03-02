@@ -2,24 +2,11 @@
 
 import { CORE_WEB_VITALS } from "@/app/path";
 import theme from "@/app/theme";
-import {
-  List,
-  ListItem,
-  ThemeProvider,
-  Typography,
-} from "@material-tailwind/react";
-import { usePathname } from "next/navigation";
+import { List, ThemeProvider, Typography } from "@material-tailwind/react";
 import AccordionItem from "./AccordionItem";
+import ListItemLink from "./ListItemLink";
 
 const Sidebar = () => {
-  const pathname = usePathname();
-
-  const isSelected = (path: string) => pathname === path;
-  const isOpen = (path: string) =>
-    pathname === path ||
-    pathname.startsWith(`${path}/`) ||
-    pathname.startsWith(`/demo${path}/`);
-
   return (
     <ThemeProvider value={theme}>
       <div className="overflow-y-auto w-80 bg-gray-50 font-medium sidebar">
@@ -32,156 +19,83 @@ const Sidebar = () => {
         </div>
         <div className="px-4">
           <List>
-            <AccordionItem
-              header="Core Web Vitals"
-              selected={isSelected(CORE_WEB_VITALS.PATH)}
-              open={isOpen(CORE_WEB_VITALS.PATH)}
-            >
+            <AccordionItem text="Core Web Vitals" path={CORE_WEB_VITALS.PATH}>
               <List>
                 <AccordionItem
-                  header={
-                    <a href={CORE_WEB_VITALS.LCP.PATH}>
-                      Large Contentful Paint (LCP)
-                    </a>
-                  }
-                  selected={isSelected(CORE_WEB_VITALS.LCP.PATH)}
-                  open={isOpen(CORE_WEB_VITALS.LCP.PATH)}
+                  text="Large Contentful Paint (LCP)"
+                  path={CORE_WEB_VITALS.LCP.PATH}
+                  visitable
                 >
                   <List>
                     <AccordionItem
-                      header="Example: 哪些元素會列入考量"
-                      selected={isSelected(CORE_WEB_VITALS.LCP.ELEMENTS.PATH)}
-                      open={isOpen(CORE_WEB_VITALS.LCP.ELEMENTS.PATH)}
+                      text="Example: 哪些元素會列入考量"
+                      path={CORE_WEB_VITALS.LCP.ELEMENTS.PATH}
                     >
-                      <a href={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}>
-                        <ListItem
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH,
-                          )}
-                        >
-                          包含文字節點或是其他行內文字元素的區塊元素
-                        </ListItem>
-                      </a>
-                      <a href={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}>
-                        <ListItem
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH,
-                          )}
-                        >
-                          {"<img>"}
-                        </ListItem>
-                      </a>
-                      <a href={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}>
-                        <ListItem
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH,
-                          )}
-                        >
-                          {"<svg> 裡面的 <image>"}
-                        </ListItem>
-                      </a>
-                      <a
-                        href={
-                          CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH
-                        }
-                      >
-                        <ListItem
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH,
-                          )}
-                        >
-                          透過 url() 載入的 background image
-                        </ListItem>
-                      </a>
-                      <a href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}>
-                        <ListItem
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH,
-                          )}
-                        >
-                          {"<video> 的 poster 封面圖"}
-                        </ListItem>
-                      </a>
-                      <a
-                        href={
-                          CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_AUTOPLAY_FRAME.PATH
-                        }
-                      >
-                        <ListItem
-                          selected={isSelected(
+                      <List>
+                        <ListItemLink
+                          text="包含文字節點或是其他行內文字元素的區塊元素"
+                          path={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}
+                        />
+                        <ListItemLink
+                          text="<img>"
+                          path={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}
+                        />
+                        <ListItemLink
+                          text="<svg> 裡面的 <image>"
+                          path={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}
+                        />
+                        <ListItemLink
+                          text="透過 url() 載入的 background image"
+                          path={
+                            CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH
+                          }
+                        />
+                        <ListItemLink
+                          text="<video> 的 poster 封面圖"
+                          path={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}
+                        />
+                        <ListItemLink
+                          text="自動播放的 <video> 所繪製的第一個 frame"
+                          path={
                             CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_AUTOPLAY_FRAME
-                              .PATH,
-                          )}
-                        >
-                          {"自動播放的 <video> 所繪製的第一個 frame"}
-                        </ListItem>
-                      </a>
+                              .PATH
+                          }
+                        />
+                      </List>
                     </AccordionItem>
                     <AccordionItem
-                      header="Example: 移除 Resouce load delay"
-                      selected={isSelected(
-                        CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.PATH,
-                      )}
-                      open={isOpen(
-                        CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.PATH,
-                      )}
+                      text="Example: 移除 Resouce load delay"
+                      path={CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.PATH}
                     >
                       <List>
                         <AccordionItem
-                          header="<img>"
-                          selected={isSelected(
-                            CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.PATH,
-                          )}
-                          open={isOpen(
-                            CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.PATH,
-                          )}
+                          text="<img>"
+                          path={
+                            CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.PATH
+                          }
                         >
                           <List>
-                            <a
-                              href={
+                            <ListItemLink
+                              text="有 src 屬性"
+                              path={
                                 CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.SRC
                                   .PATH
                               }
-                            >
-                              <ListItem
-                                selected={isSelected(
-                                  CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
-                                    .SRC.PATH,
-                                )}
-                              >
-                                有 src 屬性
-                              </ListItem>
-                            </a>
-                            <a
-                              href={
+                            />
+                            <ListItemLink
+                              text="動態插入"
+                              path={
                                 CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
                                   .DYNAMIC.PATH
                               }
-                            >
-                              <ListItem
-                                selected={isSelected(
-                                  CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
-                                    .DYNAMIC.PATH,
-                                )}
-                              >
-                                動態插入
-                              </ListItem>
-                            </a>
-                            <a
-                              href={
+                            />
+                            <ListItemLink
+                              text="使用 data-src 延遲載入"
+                              path={
                                 CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.LAZY
                                   .PATH
                               }
-                            >
-                              <ListItem
-                                selected={isSelected(
-                                  CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
-                                    .LAZY.PATH,
-                                )}
-                              >
-                                {"使用 data-src 延遲載入"}
-                              </ListItem>
-                            </a>
+                            />
                           </List>
                         </AccordionItem>
                       </List>
