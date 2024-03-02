@@ -253,8 +253,15 @@ const lcp = () => {
                       正確案例
                       <ul>
                         <li>
-                          LCP 元素是有 <code>src</code> 或 <code>srcset</code>{" "}
-                          屬性的 <code>{"<img>"}</code>{" "}
+                          <InnerLink
+                            href={
+                              CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.SRC
+                                .PATH
+                            }
+                          >
+                            LCP 元素是有 <code>src</code> 或 <code>srcset</code>{" "}
+                            屬性的 <code>{"<img>"}</code>{" "}
+                          </InnerLink>
                         </li>
                         <li>
                           LCP 元素使用 CSS background image，但圖片有透過{" "}
@@ -270,14 +277,28 @@ const lcp = () => {
                       錯誤案例
                       <ul>
                         <li>
-                          LCP 元素是透過 JavaScript 動態插入的{" "}
-                          <code>{"<img>"}</code>{" "}
+                          <InnerLink
+                            href={
+                              CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
+                                .DYNAMIC.PATH
+                            }
+                          >
+                            LCP 元素是透過 JavaScript 動態插入的{" "}
+                            <code>{"<img>"}</code>{" "}
+                          </InnerLink>
                         </li>
                         <li>
-                          LCP 元素是透過 JavaScript library 延遲載入，library
-                          會隱藏其 <code>src</code> 或 <code>srcset</code>{" "}
-                          屬性，使用 <code>data-src</code> 或
-                          <code>data-srcset</code> 之類的自訂屬性取代
+                          <InnerLink
+                            href={
+                              CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.LAZY
+                                .PATH
+                            }
+                          >
+                            LCP 元素是透過 JavaScript library 延遲載入，library
+                            會隱藏其 <code>src</code> 或 <code>srcset</code>{" "}
+                            屬性，使用 <code>data-src</code> 或
+                            <code>data-srcset</code> 之類的自訂屬性取代
+                          </InnerLink>
                         </li>
                         <li>LCP 元素使用 CSS background image</li>
                       </ul>
