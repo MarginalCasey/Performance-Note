@@ -53,6 +53,35 @@ const routes: Route[] = [
               },
             ],
           },
+          {
+            name: "Example: 移除 Resouce load delay",
+            path: "resource-load-delay",
+            isVisitable: false,
+            pages: [
+              {
+                name: "<img>",
+                path: "img",
+                isVisitable: false,
+                pages: [
+                  {
+                    name: "有 src 屬性",
+                    path: "src",
+                    demo: true,
+                  },
+                  {
+                    name: "動態插入",
+                    path: "dynamic",
+                    demo: true,
+                  },
+                  {
+                    name: "使用 data-src 延遲載入",
+                    path: "lazy",
+                    demo: true,
+                  },
+                ],
+              },
+            ],
+          },
         ],
       },
     ],
