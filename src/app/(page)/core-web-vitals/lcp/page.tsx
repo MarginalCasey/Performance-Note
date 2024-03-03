@@ -91,8 +91,8 @@ const lcp = () => {
           <h4>何時會回報 LCP</h4>
           <p>
             網頁通常會分階段載入，因此網頁上最大的元素可能會改變。為處理可能的變動，瀏覽器會在瀏覽器繪製第一個
-            frame 後，立即 dispatch 一個 type 
-            <code>largest-contentful-paint</code> 的 
+            frame 後，立即 dispatch 一個 type{" "}
+            <code>largest-contentful-paint</code> 的{" "}
             <a
               href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"
               target="_blank"
@@ -100,7 +100,7 @@ const lcp = () => {
               <code>PerformanceEntry</code>
             </a>{" "}
             來 識別最大內容元素。但在渲染後續的 frame
-            時，每當最大內容元素變更，系統就會 dispatch 另一個 
+            時，每當最大內容元素變更，系統就會 dispatch 另一個{" "}
             <code>PerformanceEntry</code>。
           </p>
           <p>
@@ -153,7 +153,7 @@ const lcp = () => {
                 href="https://github.com/GoogleChrome/web-vitals"
                 target="_blank"
               >
-                <code>web-vitals</code> JavaScript library
+                <code>web-vitals</code> JavaScript library
               </a>
             </li>
           </ul>
