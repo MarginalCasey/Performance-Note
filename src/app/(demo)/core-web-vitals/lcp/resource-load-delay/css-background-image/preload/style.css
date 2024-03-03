@@ -1,0 +1,5 @@
+.background-image {
+  width: 640px;
+  height: 426px;
+  background-image: url("/image-640-uncompressed.jpg");
+}

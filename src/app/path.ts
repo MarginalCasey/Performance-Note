@@ -37,6 +37,15 @@ export const CORE_WEB_VITALS = {
           PATH: "/demo/core-web-vitals/lcp/resource-load-delay/img/lazy",
         },
       },
+      CSS_BACKGROUND_IMAGE: {
+        PATH: "/demo/core-web-vitals/lcp/resource-load-delay/css-background-image",
+        NO_PRELOAD: {
+          PATH: "/demo/core-web-vitals/lcp/resource-load-delay/css-background-image/no-preload",
+        },
+        PRELOAD: {
+          PATH: "/demo/core-web-vitals/lcp/resource-load-delay/css-background-image/preload",
+        },
+      },
     },
   },
 } as const;

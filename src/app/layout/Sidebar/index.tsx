@@ -98,6 +98,30 @@ const Sidebar = () => {
                             />
                           </List>
                         </AccordionItem>
+                        <AccordionItem
+                          text="CSS background image"
+                          path={
+                            CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
+                              .CSS_BACKGROUND_IMAGE.PATH
+                          }
+                        >
+                          <List>
+                            <ListItemLink
+                              text="沒有 preload"
+                              path={
+                                CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
+                                  .CSS_BACKGROUND_IMAGE.NO_PRELOAD.PATH
+                              }
+                            />
+                            <ListItemLink
+                              text="preload"
+                              path={
+                                CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
+                                  .CSS_BACKGROUND_IMAGE.PRELOAD.PATH
+                              }
+                            />
+                          </List>
+                        </AccordionItem>
                       </List>
                     </AccordionItem>
                   </List>

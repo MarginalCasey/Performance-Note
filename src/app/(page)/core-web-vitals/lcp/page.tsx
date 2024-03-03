@@ -264,8 +264,15 @@ const lcp = () => {
                           </InnerLink>
                         </li>
                         <li>
-                          LCP 元素使用 CSS background image，但圖片有透過{" "}
-                          <code>{'<link rel="preload">'}</code> 預先載入
+                          <InnerLink
+                            href={
+                              CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
+                                .CSS_BACKGROUND_IMAGE.PRELOAD.PATH
+                            }
+                          >
+                            LCP 元素使用 CSS background image，但圖片有透過{" "}
+                            <code>{'<link rel="preload">'}</code> 預先載入
+                          </InnerLink>
                         </li>
                         <li>
                           LCP 元素是使用 web font 的文字節點，但字型有透過{" "}
@@ -300,7 +307,16 @@ const lcp = () => {
                             <code>data-srcset</code> 之類的自訂屬性取代
                           </InnerLink>
                         </li>
-                        <li>LCP 元素使用 CSS background image</li>
+                        <li>
+                          <InnerLink
+                            href={
+                              CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
+                                .CSS_BACKGROUND_IMAGE.NO_PRELOAD.PATH
+                            }
+                          >
+                            LCP 元素使用 CSS background image
+                          </InnerLink>
+                        </li>
                       </ul>
                       <p>
                         在這些情況下，瀏覽器必須執行 script 或套用 CSS，才能找到
