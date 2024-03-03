@@ -1,4 +1,4 @@
-import CodePreview from "@/app/components/CodePreview";
+import CodeBlock from "@/app/components/CodeBlock";
 import LCP from "@/app/components/metrics/LCP";
 import Script from "next/script";
 
@@ -31,9 +31,9 @@ const Image = () => {
         data-src={`/image-640-uncompressed.jpg?time=${Date.now()}`}
       />
       <Script id="script">{script}</Script>
-      <CodePreview language="xml" collapse>
+      <CodeBlock language="xml" collapse>
         {code}
-      </CodePreview>
+      </CodeBlock>
       <LCP />
     </div>
   );

@@ -8,11 +8,11 @@ import SyntaxHighlighter, {
 } from "react-syntax-highlighter";
 import { stackoverflowLight } from "react-syntax-highlighter/dist/esm/styles/hljs";
 
-interface CodePreviewProps extends SyntaxHighlighterProps {
+interface CodeBlockProps extends SyntaxHighlighterProps {
   collapse?: boolean;
 }
 
-const CodePreview: FC<CodePreviewProps> = ({ collapse = false, ...props }) => {
+const CodeBlock: FC<CodeBlockProps> = ({ collapse = false, ...props }) => {
   const [openState, setOpenState] = useState(false);
 
   const toggleOpen = () => setOpenState((cur) => !cur);
@@ -33,4 +33,4 @@ const CodePreview: FC<CodePreviewProps> = ({ collapse = false, ...props }) => {
   return <SyntaxHighlighter style={stackoverflowLight} {...props} />;
 };
 
-export default CodePreview;
+export default CodeBlock;

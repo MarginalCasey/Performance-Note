@@ -1,5 +1,5 @@
 import Alert from "@/app/components/Alert";
-import CodePreview from "@/app/components/CodePreview";
+import CodeBlock from "@/app/components/CodeBlock";
 import InnerLink from "@/app/components/InnerLink";
 import { CORE_WEB_VITALS } from "@/app/path";
 
@@ -314,7 +314,7 @@ const lcp = () => {
                       。如果資源只能從外部 CSS 或 JavaScript 取得，則 LCP
                       資源應以優先順序 high 預先載入。
                     </p>
-                    <CodePreview language="xml">
+                    <CodeBlock language="xml">
                       {`
   <!-- Load the stylesheet that will reference the LCP image. -->
   <link rel="stylesheet" href="/path/to/styles.css">
@@ -322,7 +322,7 @@ const lcp = () => {
   <!-- Preload the LCP image with a high fetchpriority so it starts loading with the stylesheet. -->
   <link rel="preload" fetchpriority="high" as="image" href="/path/to/hero-image.webp" type="image/webp">
                     `}
-                    </CodePreview>
+                    </CodeBlock>
                   </section>
                 </li>
                 <li>
@@ -342,22 +342,22 @@ const lcp = () => {
                       <code>fetchpriority</code>{" "}
                       屬性，可以提醒瀏覽器哪些資源最重要。
                     </p>
-                    <CodePreview language="xml">
+                    <CodeBlock language="xml">
                       {`
   <img fetchpriority="high" src="/path/to/hero-image.webp">
                     `}
-                    </CodePreview>
+                    </CodeBlock>
                   </section>
                   <section>
                     <p>
                       同理，對於那些一開始不可見的圖片(例如 carousel
                       中的圖片)，可以設定較低的優先度將頻寬分給優先度更高的資源
                     </p>
-                    <CodePreview language="xml">
+                    <CodeBlock language="xml">
                       {`
   <img fetchpriority="low" src="/path/to/carousel-slide-3.webp">
                     `}
-                    </CodePreview>
+                    </CodeBlock>
                   </section>
                 </li>
               </ol>
