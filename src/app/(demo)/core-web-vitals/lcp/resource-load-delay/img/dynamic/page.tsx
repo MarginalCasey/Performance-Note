@@ -1,4 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import CodeBlockCollapse from "@/app/components/CodeBlockCollapse";
 import LCP from "@/app/components/metrics/LCP";
 import Script from "next/script";
 
@@ -15,9 +16,9 @@ const Image = () => {
     <div>
       <div id="dynamic" />
       <Script id="script">{script}</Script>
-      <CodeBlock language="xml" collapse>
-        {code}
-      </CodeBlock>
+      <CodeBlockCollapse>
+        <CodeBlock language="xml">{code}</CodeBlock>
+      </CodeBlockCollapse>
       <LCP />
     </div>
   );
