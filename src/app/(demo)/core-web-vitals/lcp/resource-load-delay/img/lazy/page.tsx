@@ -20,7 +20,7 @@ const Image = () => {
     });
   `;
   const code = `
-  <img className="lazy" data-src="/image-640-uncompressed.jpg?v=2&time=${Date.now()}" />
+  <img className="lazy" data-src="/image-640-uncompressed.jpg?time=${Date.now()}" />
   <script>${script}</script>
   `;
 
@@ -28,7 +28,7 @@ const Image = () => {
     <div>
       <img
         className="lazy"
-        data-src={`/image-640-uncompressed.jpg?v=2&time=${Date.now()}`}
+        data-src={`/image-640-uncompressed.jpg?time=${Date.now()}`}
       />
       <Script id="script">{script}</Script>
       <CodePreview language="xml" collapse>
