@@ -3,7 +3,7 @@ import CodeBlock from "@/app/components/CodeBlock";
 import InnerLink from "@/app/components/InnerLink";
 import { CORE_WEB_VITALS } from "@/app/path";
 
-const lcp = () => {
+const LCP = () => {
   return (
     <div>
       <h1>Largest Contentful Paint (LCP)</h1>
@@ -610,4 +610,4 @@ const lcp = () => {
   );
 };
 
-export default lcp;
+export default LCP;

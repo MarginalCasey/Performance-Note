@@ -126,6 +126,13 @@ const Sidebar = () => {
                     </AccordionItem>
                   </List>
                 </AccordionItem>
+                <AccordionItem
+                  text="Cumulative Layout Shift (CLS)"
+                  path={CORE_WEB_VITALS.CLS.PATH}
+                  visitable
+                >
+                  <List>{null}</List>
+                </AccordionItem>
               </List>
             </AccordionItem>
           </List>

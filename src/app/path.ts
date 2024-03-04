@@ -48,4 +48,7 @@ export const CORE_WEB_VITALS = {
       },
     },
   },
+  CLS: {
+    PATH: "/core-web-vitals/cls",
+  },
 } as const;
