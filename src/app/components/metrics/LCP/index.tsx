@@ -2,6 +2,7 @@
 import { useEffect, useState } from "react";
 import type { LCPMetricWithAttribution } from "web-vitals";
 import { onLCP } from "web-vitals/attribution";
+import MetricDrawer from "../MetricDrawer";
 
 export default function LCP() {
   const [lcp, setLCP] = useState<LCPMetricWithAttribution>();
@@ -43,7 +44,7 @@ export default function LCP() {
   }
 
   return (
-    <div>
+    <MetricDrawer name="LCP">
       <h1>LCP</h1>
       <div>value: {Math.round(lcp.value)}</div>
       <div>rating: {lcp.rating}</div>
@@ -59,6 +60,6 @@ export default function LCP() {
       <div>
         Element render delay: {Math.round(lcp.attribution.elementRenderDelay)}
       </div>
-    </div>
+    </MetricDrawer>
   );
 }
