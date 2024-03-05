@@ -131,7 +131,82 @@ const Sidebar = () => {
                   path={CORE_WEB_VITALS.CLS.PATH}
                   visitable
                 >
-                  <List>{null}</List>
+                  <List>
+                    <AccordionItem
+                      text="Example: 圖片"
+                      path={CORE_WEB_VITALS.CLS.IMG.PATH}
+                    >
+                      <List>
+                        <ListItemLink
+                          text="固定寬高"
+                          path={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE}
+                        />
+                        <AccordionItem
+                          text="RWD 圖片"
+                          path={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.PATH}
+                        >
+                          <List>
+                            <ListItemLink
+                              text="沒有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITHOUT_SIZE
+                              }
+                            />
+                            <ListItemLink
+                              text="有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE
+                              }
+                            />
+                          </List>
+                        </AccordionItem>
+                        <AccordionItem
+                          text="Responsive images"
+                          path={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES.PATH}
+                        >
+                          <List>
+                            <ListItemLink
+                              text="沒有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES
+                                  .WITHOUT_SIZE
+                              }
+                            />
+                            <ListItemLink
+                              text="有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES
+                                  .WITH_SIZE
+                              }
+                            />
+                          </List>
+                        </AccordionItem>
+                        <AccordionItem
+                          text="在不同螢幕下顯示不同寬高比的圖片"
+                          path={
+                            CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.PATH
+                          }
+                        >
+                          <List>
+                            <ListItemLink
+                              text="沒有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO
+                                  .WITHOUT_SIZE
+                              }
+                            />
+                            <ListItemLink
+                              text="有設定寬高"
+                              path={
+                                CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO
+                                  .WITH_SIZE
+                              }
+                            />
+                          </List>
+                        </AccordionItem>
+                      </List>
+                    </AccordionItem>
+                  </List>
                 </AccordionItem>
               </List>
             </AccordionItem>
