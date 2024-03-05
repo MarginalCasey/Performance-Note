@@ -114,4 +114,9 @@
     @apply text-gray-500;
     @apply underline;
   }
+
+  .demo img {
+    max-width: revert;
+    height: revert;
+  }
 }
