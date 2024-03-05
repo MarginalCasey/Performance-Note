@@ -71,6 +71,22 @@
     @apply font-semibold;
   }
 
+  table {
+    @apply table-auto;
+    @apply w-full;
+    @apply text-left;
+  }
+
+  th,
+  td {
+    @apply p-4;
+  }
+
+  tr {
+    @apply border;
+    @apply border-blue-gray-100;
+  }
+
   .container {
     @apply flex;
     @apply h-screen;
