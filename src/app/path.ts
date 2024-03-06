@@ -89,6 +89,15 @@ export const CORE_WEB_VITALS = {
     },
     FONT: {
       PATH: "/demo/core-web-vitals/cls/font",
+      SWAP: {
+        PATH: "/demo/core-web-vitals/cls/font/swap",
+      },
+      BLOCK: {
+        PATH: "/demo/core-web-vitals/cls/font/block",
+      },
+      OPTIONAL: {
+        PATH: "/demo/core-web-vitals/cls/font/optional",
+      },
     },
   },
 } satisfies Route;

@@ -207,6 +207,25 @@ const Sidebar = () => {
                         </AccordionItem>
                       </List>
                     </AccordionItem>
+                    <AccordionItem
+                      text="Example: 字型"
+                      path={CORE_WEB_VITALS.CLS.FONT.PATH}
+                    >
+                      <List>
+                        <ListItemLink
+                          text="font-display: swap"
+                          path={CORE_WEB_VITALS.CLS.FONT.SWAP.PATH}
+                        />
+                        <ListItemLink
+                          text="font-display: block"
+                          path={CORE_WEB_VITALS.CLS.FONT.BLOCK.PATH}
+                        />
+                        <ListItemLink
+                          text="font-display: optional"
+                          path={CORE_WEB_VITALS.CLS.FONT.OPTIONAL.PATH}
+                        />
+                      </List>
+                    </AccordionItem>
                   </List>
                 </AccordionItem>
               </List>

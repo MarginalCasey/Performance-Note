@@ -217,10 +217,18 @@ const CLS = () => {
           <h4>網頁字型</h4>
           <p>網頁字型的下載與渲染通常的處理方式是</p>
           <ul>
-            <li>用網頁字型替換掉備用字型 (FOUT—flash of unstyled text)</li>
+            <li>
+              用網頁字型替換掉備用字型 (FOUT—flash of unstyled text){" "}
+              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.SWAP.PATH}>
+                範例
+              </InnerLink>
+            </li>
             <li>
               使用不可見的備用字型渲染文字，直到網頁字型可用後且讓文字變為可見
               (FOIT—flash of invisible text)
+              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.BLOCK.PATH}>
+                範例
+              </InnerLink>
             </li>
           </ul>
           <p>
@@ -235,6 +243,9 @@ const CLS = () => {
                 <code>font-display: optional</code>
               </InnerLink>{" "}
               可以避免 re-layout，因為網頁字型只有在可以立即載入時才會被使用。
+              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.OPTIONAL.PATH}>
+                範例
+              </InnerLink>
             </li>
             <li>
               使用適合的備用字型

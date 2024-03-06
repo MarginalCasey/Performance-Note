@@ -1,6 +1,13 @@
-const Lispsum = () => {
+import type { DetailedHTMLProps, HTMLAttributes } from "react";
+
+const Lispsum = (
+  props: DetailedHTMLProps<
+    HTMLAttributes<HTMLParagraphElement>,
+    HTMLParagraphElement
+  >,
+) => {
   return (
-    <p>
+    <p {...props}>
       Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
       ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis
       dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies
