@@ -26,7 +26,7 @@ const LCP = () => {
             以下，評估門檻是網頁載入的<b>第 75 個百分位數</b>
           </p>
           <img
-            src="https://web.dev/static/articles/lcp/image/good-lcp-values.svg?hl=zh-tw"
+            src="https://web.dev/static/articles/lcp/image/good-lcp-values.svg"
             alt=""
           />
         </section>
@@ -221,7 +221,7 @@ const LCP = () => {
             </li>
           </ul>
           <img
-            src="https://web.dev/static/articles/optimize-lcp/image/a-breakdown-lcp-showing-23a709f16b362_960.png?hl=zh-tw"
+            src="https://web.dev/static/articles/optimize-lcp/image/a-breakdown-lcp-showing-23a709f16b362_960.png"
             alt=""
           />
           <p>
@@ -237,7 +237,7 @@ const LCP = () => {
               移除 Resource load delay
               <p>LCP 資源應與該網頁載入的第一個資源同時開始載入</p>
               <img
-                src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-1ee19fc20ee1f_960.png?hl=zh-tw"
+                src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-1ee19fc20ee1f_960.png"
                 alt=""
               />
               <p>一般來說，LCP 資源的載入速度取決於兩個因素</p>
@@ -382,7 +382,7 @@ const LCP = () => {
                 資源應與該網頁載入的第一個資源同時開始載入
               </p>
               <img
-                src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-b6906b9fce22_960.png?hl=zh-tw"
+                src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-b6906b9fce22_960.png"
                 alt=""
               />
               <br />
@@ -420,7 +420,7 @@ const LCP = () => {
                       資源，即使資源已載入完畢，LCP 元素仍會無法顯示
                     </p>
                     <img
-                      src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-42b740846d30d_960.png?hl=zh-tw"
+                      src="https://web.dev/static/articles/optimize-lcp/image/a-network-waterfall-diagr-42b740846d30d_960.png"
                       alt=""
                     />
                     <p>要解決這個問題，可以採用下列其中一種做法</p>

@@ -18,6 +18,17 @@ const CLS = () => {
             元素動態新增至頁面的現有內容上方。問題可能是尺寸不明的圖片或影片、比備用字型更大或更小的字型，動態調整大小的第三方廣告或是插件。
           </p>
         </section>
+        <section>
+          <h4>怎樣算是一個良好的 CLS 分數</h4>
+          <p>
+            為了提供良好的使用者體驗，網站應力求 CLS 分數 <b>0.1</b>{" "}
+            以下，評估門檻是網頁載入的<b>第 75 個百分位數</b>
+          </p>
+          <img
+            src="https://web.dev/static/articles/cls/image/good-cls-values.svg"
+            alt=""
+          />
+        </section>
       </section>
       <section>
         <h3>CLS 的常見原因</h3>
