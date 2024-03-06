@@ -25,8 +25,8 @@ const AccordionItem: FC<AccordionItemProps> = ({
   const pathname = usePathname();
   const open =
     pathname === path ||
-    pathname.startsWith(`${path}/`) ||
-    pathname.startsWith(`/demo${path}/`);
+    pathname?.startsWith(`${path}/`) ||
+    pathname?.startsWith(`/demo${path}/`);
 
   const [openState, setOpenState] = useState(open ?? false);
 
