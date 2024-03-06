@@ -40,7 +40,7 @@ const CLS = () => {
             和 <code>height</code>{" "}
             屬性，確保在瀏覽器開始載入圖片前，已在頁面上分配足夠空間。這樣做可以盡量減少
             reflow 和 re-layout。
-            <InnerLink href={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE}>
+            <InnerLink href={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE.PATH}>
               範例
             </InnerLink>
           </p>
@@ -50,7 +50,9 @@ const CLS = () => {
           <p>
             但是當 RWD 的概念被引入之後，開發人員開始省略 width 和 height
             屬性，轉而改用 CSS 調整圖片大小
-            <InnerLink href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITHOUT_SIZE}>
+            <InnerLink
+              href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITHOUT_SIZE.PATH}
+            >
               範例
             </InnerLink>
           </p>
@@ -107,7 +109,7 @@ const CLS = () => {
               <code>{"<img>"}</code> 的 <code>width</code> 和{" "}
               <code>height</code> 屬性，每張圖片應採用相同的長寬比。
               <InnerLink
-                href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES.WITH_SIZE}
+                href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES.WITH_SIZE.PATH}
               >
                 範例
               </InnerLink>
@@ -129,6 +131,7 @@ const CLS = () => {
               <InnerLink
                 href={
                   CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.WITHOUT_SIZE
+                    .PATH
                 }
               >
                 範例
@@ -146,7 +149,9 @@ const CLS = () => {
               <code>picture</code> 元素的 <code>source</code> 上設定{" "}
               <code>width</code> 和 <code>height</code>
               <InnerLink
-                href={CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.WITH_SIZE}
+                href={
+                  CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.WITH_SIZE.PATH
+                }
               >
                 範例
               </InnerLink>

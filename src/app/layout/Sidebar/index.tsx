@@ -139,7 +139,7 @@ const Sidebar = () => {
                       <List>
                         <ListItemLink
                           text="固定寬高"
-                          path={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE}
+                          path={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE.PATH}
                         />
                         <AccordionItem
                           text="RWD 圖片"
@@ -150,6 +150,7 @@ const Sidebar = () => {
                               text="沒有設定寬高"
                               path={
                                 CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITHOUT_SIZE
+                                  .PATH
                               }
                             />
                             <ListItemLink
@@ -169,14 +170,14 @@ const Sidebar = () => {
                               text="沒有設定寬高"
                               path={
                                 CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES
-                                  .WITHOUT_SIZE
+                                  .WITHOUT_SIZE.PATH
                               }
                             />
                             <ListItemLink
                               text="有設定寬高"
                               path={
                                 CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES
-                                  .WITH_SIZE
+                                  .WITH_SIZE.PATH
                               }
                             />
                           </List>
@@ -192,14 +193,14 @@ const Sidebar = () => {
                               text="沒有設定寬高"
                               path={
                                 CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO
-                                  .WITHOUT_SIZE
+                                  .WITHOUT_SIZE.PATH
                               }
                             />
                             <ListItemLink
                               text="有設定寬高"
                               path={
                                 CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO
-                                  .WITH_SIZE
+                                  .WITH_SIZE.PATH
                               }
                             />
                           </List>
