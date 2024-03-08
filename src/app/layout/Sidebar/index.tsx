@@ -263,6 +263,10 @@ const Sidebar = () => {
                   }
                 />
                 <ListItemLink
+                  text="為瀏覽器提供 resource hint"
+                  path={PERFORMANCE_OPTIMIZATION.RESOURCE_HINT.PATH}
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />

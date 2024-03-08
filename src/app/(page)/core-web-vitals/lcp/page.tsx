@@ -345,10 +345,14 @@ const LCP = () => {
                   <section>
                     <p>
                       如果網頁的 LCP 元素是 <code>{"<img>"}</code>
-                      ，建議在元素上設定 <code>{'fetchpriority="high”'}</code>
+                      ，建議在元素上設定 <code>{'fetchpriority="high"'}</code>
                       。因為圖片不是 render-blocking
-                      的資源，瀏覽器一開始並不會以最高優先順序載入圖片。利用
-                      <code>fetchpriority</code>{" "}
+                      的資源，瀏覽器一開始並不會以最高優先順序載入圖片。利用{" "}
+                      <InternalLink
+                        href={`${PERFORMANCE_OPTIMIZATION.RESOURCE_HINT.PATH}#fetchpriority`}
+                      >
+                        <code>fetchpriority</code>
+                      </InternalLink>{" "}
                       屬性，可以提醒瀏覽器哪些資源最重要。
                     </p>
                     <CodeBlock language="xml">

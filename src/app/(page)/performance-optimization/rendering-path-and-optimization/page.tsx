@@ -1,6 +1,7 @@
 import Alert from "@/app/components/Alert";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
+import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const RenderingPathAndOptimization = () => {
   return (
@@ -123,7 +124,12 @@ const RenderingPathAndOptimization = () => {
             </ul>
             <p>
               這些做法都會導致資源被延遲載入，在無法避免的情況下，可以使用{" "}
-              <InternalLink href="TODO">preload</InternalLink> 來避免延遲
+              <InternalLink
+                href={`${PERFORMANCE_OPTIMIZATION.RESOURCE_HINT.PATH}#preload`}
+              >
+                preload
+              </InternalLink>{" "}
+              來避免延遲
             </p>
           </section>
           <section>
@@ -150,7 +156,12 @@ const RenderingPathAndOptimization = () => {
                   </li>
                   <li>
                     如果無法取代 <code>@import</code>，還是可以使用{" "}
-                    <InternalLink href="TODO">preload</InternalLink> 來降低延遲
+                    <InternalLink
+                      href={`${PERFORMANCE_OPTIMIZATION.RESOURCE_HINT.PATH}#preload`}
+                    >
+                      preload
+                    </InternalLink>{" "}
+                    來降低延遲
                   </li>
                 </ul>
               </li>
