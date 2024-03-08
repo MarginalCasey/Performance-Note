@@ -14,7 +14,7 @@ const Alert: FC<AlertProps> = ({ type, children }) => {
         <div className="mr-2">
           <StarIcon className="w-4 h-4 m-1" />
         </div>
-        {children}
+        <div>{children}</div>
       </div>
     );
   }
@@ -24,7 +24,7 @@ const Alert: FC<AlertProps> = ({ type, children }) => {
       <div className="mr-2">
         <ExclamationCircleIcon className="w-4 h-4 m-1" />
       </div>
-      {children}
+      <div>{children}</div>
     </div>
   );
 };
