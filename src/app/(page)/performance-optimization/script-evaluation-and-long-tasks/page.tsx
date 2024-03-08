@@ -1,4 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import ExternalLink from "@/app/components/ExternalLink";
 import InnerLink from "@/app/components/InnerLink";
 
 const ScriptEvaluation = () => {
@@ -103,12 +104,9 @@ const ScriptEvaluation = () => {
           <p>一個解決這個問題的方法是使用 bundler，並設定 code splitting</p>
           <p>
             另一個做法是使用{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/modulepreload"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/HTML/Attributes/rel/modulepreload">
               <code>{'<link rel="modulepreload">'}</code>
-            </a>{" "}
+            </ExternalLink>{" "}
             對 module 進行 preload
           </p>
         </section>

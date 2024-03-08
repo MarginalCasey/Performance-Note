@@ -1,3 +1,5 @@
+import ExternalLink from "@/app/components/ExternalLink";
+
 const DOM = () => {
   return (
     <div>
@@ -48,21 +50,15 @@ const DOM = () => {
             <h4>使用 content-visibility 屬性</h4>
             <p>
               透過實驗性質的{" "}
-              <a
-                href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility"
-                target="_blank"
-              >
+              <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">
                 <code>content-visibility</code>
-              </a>{" "}
+              </ExternalLink>{" "}
               屬性，可以讓某一區塊的內容，只有在進入可視範圍時才進行渲染。
             </p>
-            <a
-              href="https://web.dev/articles/content-visibility"
-              target="_blank"
-            >
+            <ExternalLink href="https://web.dev/articles/content-visibility">
               content-visibility: the new CSS property that boosts your
               rendering performance
-            </a>
+            </ExternalLink>
           </section>
         </section>
       </section>

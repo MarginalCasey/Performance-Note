@@ -1,4 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import ExternalLink from "@/app/components/ExternalLink";
 
 const LongTasks = () => {
   return (
@@ -89,12 +90,9 @@ const LongTasks = () => {
           <h4>只在有需要時 yield</h4>
           <p>
             透過{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduling/isInputPending"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduling/isInputPending">
               navigator.scheduling.isInputPending()
-            </a>{" "}
+            </ExternalLink>{" "}
             (目前僅 chromium 瀏覽器支援) 判斷使用者是否正在與頁面進行互動
           </p>
           <CodeBlock language="javascript">
@@ -143,26 +141,17 @@ const LongTasks = () => {
           <h4>Scheduler API</h4>
           <p>
             目前僅 chromium 瀏覽器支援的{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler">
               scheduler API
-            </a>{" "}
+            </ExternalLink>{" "}
             (
-            <a
-              href="https://www.npmjs.com/package/scheduler-polyfill"
-              target="_blank"
-            >
+            <ExternalLink href="https://www.npmjs.com/package/scheduler-polyfill">
               polyfill
-            </a>
+            </ExternalLink>
             )，提供了一個{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler/postTask">
               <code>postTask()</code>
-            </a>{" "}
+            </ExternalLink>{" "}
             函式，允許建立不同優先順序的 task，還可以設定延遲時間、中斷 task
             又或是調整優先順序
           </p>
@@ -196,12 +185,9 @@ const LongTasks = () => {
           <h4>scheduler.yield</h4>
           <p>
             目前還是實驗性質的{" "}
-            <a
-              href="https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial">
               <code>scheduler.yield</code>
-            </a>{" "}
+            </ExternalLink>{" "}
             可以讓執行到一半被中斷的 tasks，照著原先的順序被執行，而不會像使用
             <code>setTimeout</code> 一樣是把 task 插入到 task queue 尾端。
           </p>

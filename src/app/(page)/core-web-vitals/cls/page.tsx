@@ -1,4 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import ExternalLink from "@/app/components/ExternalLink";
 import InnerLink from "@/app/components/InnerLink";
 import { CORE_WEB_VITALS } from "@/app/path";
 
@@ -37,12 +38,9 @@ const CLS = () => {
           <p>
             對圖片和影片元素加上 <code>width</code> 和 <code>height</code>{" "}
             或是透過 CSS 的{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">
               <code>aspect-ratio</code>
-            </a>{" "}
+            </ExternalLink>{" "}
             屬性設定寬高比，確保瀏覽器在載入圖片時，有分配足夠的空間給它們。
           </p>
           <br />
@@ -274,12 +272,9 @@ const CLS = () => {
             </li>
             <li>
               使用一些新的 CSS 屬性來{" "}
-              <a
-                href="https://developer.chrome.com/blog/font-fallbacks"
-                target="_blank"
-              >
+              <ExternalLink href="https://developer.chrome.com/blog/font-fallbacks">
                 改善備用字型
-              </a>{" "}
+              </ExternalLink>{" "}
               與網頁字型之間的差異
               <ul>
                 <li>

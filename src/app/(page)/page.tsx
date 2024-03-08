@@ -1,3 +1,5 @@
+import ExternalLink from "@/app/components/ExternalLink";
+
 export default function Home() {
   return (
     <div>
@@ -5,17 +7,14 @@ export default function Home() {
         這是將我從 web.dev 網站
         <ul>
           <li>
-            <a href="https://web.dev/learn/performance/welcome" target="_blank">
+            <ExternalLink href="https://web.dev/learn/performance/welcome">
               https://web.dev/learn/performance/welcome
-            </a>
+            </ExternalLink>
           </li>
           <li>
-            <a
-              href="https://web.dev/explore/learn-core-web-vitals"
-              target="_blank"
-            >
+            <ExternalLink href="https://web.dev/explore/learn-core-web-vitals">
               https://web.dev/explore/learn-core-web-vitals
-            </a>
+            </ExternalLink>
           </li>
         </ul>
         上所學到的知識整理而成的筆記。

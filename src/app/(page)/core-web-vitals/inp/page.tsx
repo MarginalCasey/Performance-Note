@@ -1,4 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import ExternalLink from "@/app/components/ExternalLink";
 import InnerLink from "@/app/components/InnerLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
@@ -119,12 +120,9 @@ const INP = () => {
                   <li>使用 debounce</li>
                   <li>
                     使用{" "}
-                    <a
-                      href="https://developer.mozilla.org/docs/Web/API/AbortController/abort"
-                      target="_blank"
-                    >
+                    <ExternalLink href="https://developer.mozilla.org/docs/Web/API/AbortController/abort">
                       AbortController
-                    </a>{" "}
+                    </ExternalLink>{" "}
                     來取消 fetch，讓 fetch 的 callback 不必被執行
                   </li>
                 </ul>
@@ -234,12 +232,9 @@ const INP = () => {
               </li>
               <li>
                 使用{" "}
-                <a
-                  href="https://web.dev/articles/content-visibility"
-                  target="_blank"
-                >
+                <ExternalLink href="https://web.dev/articles/content-visibility">
                   <code>content-visibility</code>
-                </a>{" "}
+                </ExternalLink>{" "}
                 屬性來 lazy render 畫面外的元素
               </li>
               <li>

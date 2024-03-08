@@ -1,5 +1,6 @@
 import Alert from "@/app/components/Alert";
 import CodeBlock from "@/app/components/CodeBlock";
+import ExternalLink from "@/app/components/ExternalLink";
 import InnerLink from "@/app/components/InnerLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
@@ -93,12 +94,9 @@ const LCP = () => {
             網頁通常會分階段載入，因此網頁上最大的元素可能會改變。為處理可能的變動，瀏覽器會在瀏覽器繪製第一個
             frame 後，立即 dispatch 一個 type{" "}
             <code>largest-contentful-paint</code> 的{" "}
-            <a
-              href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry"
-              target="_blank"
-            >
+            <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/PerformanceEntry">
               <code>PerformanceEntry</code>
-            </a>{" "}
+            </ExternalLink>{" "}
             來 識別最大內容元素。但在渲染後續的 frame
             時，每當最大內容元素變更，系統就會 dispatch 另一個{" "}
             <code>PerformanceEntry</code>。
@@ -131,59 +129,47 @@ const LCP = () => {
           <h5>Field tools</h5>
           <ul>
             <li>
-              <a href="https://developer.chrome.com/docs/crux/" target="_blank">
+              <ExternalLink href="https://developer.chrome.com/docs/crux/">
                 Chrome User Experience Report
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href="https://pagespeed.web.dev/" target="_blank">
+              <ExternalLink href="https://pagespeed.web.dev/">
                 PageSpeed Insights
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                href="https://support.google.com/webmasters/answer/9205520"
-                target="_blank"
-              >
+              <ExternalLink href="https://support.google.com/webmasters/answer/9205520">
                 Search Console (Core Web Vitals report)
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                href="https://github.com/GoogleChrome/web-vitals"
-                target="_blank"
-              >
+              <ExternalLink href="https://github.com/GoogleChrome/web-vitals">
                 <code>web-vitals</code> JavaScript library
-              </a>
+              </ExternalLink>
             </li>
           </ul>
           <h5>Lab tools</h5>
           <ul>
             <li>
-              <a
-                href="https://developer.chrome.com/docs/devtools/"
-                target="_blank"
-              >
+              <ExternalLink href="https://developer.chrome.com/docs/devtools/">
                 Chrome DevTools
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a
-                href="https://developer.chrome.com/docs/lighthouse/overview/"
-                target="_blank"
-              >
+              <ExternalLink href="https://developer.chrome.com/docs/lighthouse/overview/">
                 Lighthouse
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href="https://pagespeed.web.dev/" target="_blank">
+              <ExternalLink href="https://pagespeed.web.dev/">
                 PageSpeed Insights
-              </a>
+              </ExternalLink>
             </li>
             <li>
-              <a href="https://webpagetest.org/" target="_blank">
+              <ExternalLink href="https://webpagetest.org/">
                 WebPageTest
-              </a>
+              </ExternalLink>
             </li>
           </ul>
         </section>
@@ -513,36 +499,24 @@ const LCP = () => {
                   <p>LCP 資源可能是圖片或是網頁字型</p>
                   <ul>
                     <li>
-                      <a
-                        href="https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/"
-                        target="_blank"
-                      >
+                      <ExternalLink href="https://developer.chrome.com/docs/lighthouse/performance/uses-responsive-images/">
                         提供最佳圖片尺寸
-                      </a>
+                      </ExternalLink>
                     </li>
                     <li>
-                      <a
-                        href="https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/"
-                        target="_blank"
-                      >
+                      <ExternalLink href="https://developer.chrome.com/docs/lighthouse/performance/uses-webp-images/">
                         使用新型的圖片格式
-                      </a>
+                      </ExternalLink>
                     </li>
                     <li>
-                      <a
-                        href="https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/"
-                        target="_blank"
-                      >
+                      <ExternalLink href="https://developer.chrome.com/docs/lighthouse/performance/uses-optimized-images/">
                         壓縮圖片
-                      </a>
+                      </ExternalLink>
                     </li>
                     <li>
-                      <a
-                        href="https://web.dev/articles/reduce-webfont-size"
-                        target="_blank"
-                      >
+                      <ExternalLink href="https://web.dev/articles/reduce-webfont-size">
                         縮減網頁字型大小
-                      </a>
+                      </ExternalLink>
                     </li>
                   </ul>
                 </li>
@@ -607,9 +581,9 @@ const LCP = () => {
                 在後端傳送內容的第一個位元組之前，前端沒有任何能做的事情，縮短
                 TTFB 也會改善所有其他的載入指標。
               </p>
-              <a href="https://web.dev/articles/optimize-ttfb" target="_blank">
+              <ExternalLink href="https://web.dev/articles/optimize-ttfb">
                 最佳化 TTFB
-              </a>
+              </ExternalLink>
             </li>
           </ol>
         </section>
