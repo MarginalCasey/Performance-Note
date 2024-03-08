@@ -1,7 +1,7 @@
 import Alert from "@/app/components/Alert";
 import CodeBlock from "@/app/components/CodeBlock";
 import InnerLink from "@/app/components/InnerLink";
-import { CORE_WEB_VITALS } from "@/app/path";
+import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const LCP = () => {
   return (
@@ -484,7 +484,11 @@ const LCP = () => {
                     <p>另一個類似的作法是 SSG。</p>
                   </li>
                   <li>
-                    <InnerLink href="TODO">拆解 long tasks</InnerLink>
+                    <InnerLink
+                      href={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
+                    >
+                      分解 long tasks
+                    </InnerLink>
                     <p>
                       即使 JavaScript 程式碼沒有
                       render-blocking，也不負責渲染元素，仍可能會延遲 LCP。

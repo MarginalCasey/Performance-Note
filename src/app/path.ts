@@ -100,4 +100,23 @@ export const CORE_WEB_VITALS = {
       },
     },
   },
+  INP: {
+    PATH: "/core-web-vitals/inp",
+    LAYOUT: {
+      PATH: "/core-web-vitals/inp/layout",
+    },
+    DOM_SIZE: {
+      PATH: "/core-web-vitals/inp/dom-size",
+    },
+  },
+} satisfies Route;
+
+export const PERFORMANCE_OPTIMIZATION = {
+  PATH: "/performance-optimization",
+  BREAK_UP_LONG_TASKS: {
+    PATH: "/performance-optimization/break-up-long-tasks",
+  },
+  SCRIPT_EVALUATION_AND_LONG_TASKS: {
+    PATH: "/performance-optimization/script-evaluation-and-long-tasks",
+  },
 } satisfies Route;

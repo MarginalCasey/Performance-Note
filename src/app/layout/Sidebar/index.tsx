@@ -1,6 +1,6 @@
 "use client";
 
-import { CORE_WEB_VITALS } from "@/app/path";
+import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 import theme from "@/app/theme";
 import { List, ThemeProvider, Typography } from "@material-tailwind/react";
 import AccordionItem from "./AccordionItem";
@@ -228,6 +228,40 @@ const Sidebar = () => {
                     </AccordionItem>
                   </List>
                 </AccordionItem>
+                <AccordionItem
+                  text="Interaction to Next Paint (INP)"
+                  path={CORE_WEB_VITALS.INP.PATH}
+                  visitable
+                >
+                  <List>
+                    <ListItemLink
+                      text="避免大型、複雜的 layout 以及 layout thrashing"
+                      path={CORE_WEB_VITALS.INP.LAYOUT.PATH}
+                    />
+                    <ListItemLink
+                      text="DOM 的大小如何影響互動性"
+                      path={CORE_WEB_VITALS.INP.DOM_SIZE.PATH}
+                    />
+                  </List>
+                </AccordionItem>
+              </List>
+            </AccordionItem>
+            <AccordionItem
+              text="Performance optimization"
+              path={PERFORMANCE_OPTIMIZATION.PATH}
+            >
+              <List>
+                <ListItemLink
+                  text="分解 long task"
+                  path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
+                />
+                <ListItemLink
+                  text="Script evaluation 與 long tasks"
+                  path={
+                    PERFORMANCE_OPTIMIZATION.SCRIPT_EVALUATION_AND_LONG_TASKS
+                      .PATH
+                  }
+                />
               </List>
             </AccordionItem>
           </List>

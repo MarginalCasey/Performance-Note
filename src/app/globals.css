@@ -54,6 +54,10 @@
     @apply my-1;
   }
 
+  pre {
+    @apply my-2;
+  }
+
   :not(pre) > code {
     @apply px-1;
     @apply py-0.5;
