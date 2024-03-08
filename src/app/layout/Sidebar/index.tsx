@@ -256,6 +256,13 @@ const Sidebar = () => {
                   path={PERFORMANCE_OPTIMIZATION.HTML.PATH}
                 />
                 <ListItemLink
+                  text="關鍵渲染路徑與資源載入最佳化"
+                  path={
+                    PERFORMANCE_OPTIMIZATION
+                      .CRITICAL_RENDERING_PATH_AND_OPTIMIZATION.PATH
+                  }
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />

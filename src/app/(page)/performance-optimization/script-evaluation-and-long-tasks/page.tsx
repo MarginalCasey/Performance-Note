@@ -1,6 +1,7 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
+import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const ScriptEvaluation = () => {
   return (
@@ -42,7 +43,11 @@ const ScriptEvaluation = () => {
             </li>
             <li>
               <code>type=module</code> 載入的 script 預設為{" "}
-              <InternalLink href="TODO">defer</InternalLink>
+              <InternalLink
+                href={`${PERFORMANCE_OPTIMIZATION.CRITICAL_RENDERING_PATH_AND_OPTIMIZATION.PATH}#defer`}
+              >
+                defer
+              </InternalLink>
             </li>
           </ul>
           <br />

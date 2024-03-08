@@ -233,8 +233,13 @@ const LCP = () => {
                 <li>
                   何時找到資源
                   <p>
-                    為確保 LCP 資源能盡早開始載入，需要讓瀏覽器的 preload
-                    scanner 在 HTML 中找到該資源
+                    為確保 LCP 資源能盡早開始載入，需要讓瀏覽器的{" "}
+                    <InternalLink
+                      href={`${PERFORMANCE_OPTIMIZATION.CRITICAL_RENDERING_PATH_AND_OPTIMIZATION.PATH}#preload_scanner`}
+                    >
+                      preload scanner
+                    </InternalLink>{" "}
+                    在 HTML 中找到該資源
                   </p>
                   <ul>
                     <li>

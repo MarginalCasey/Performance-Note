@@ -116,6 +116,9 @@ export const PERFORMANCE_OPTIMIZATION = {
   HTML: {
     PATH: "/performance-optimization/html",
   },
+  CRITICAL_RENDERING_PATH_AND_OPTIMIZATION: {
+    PATH: "/performance-optimization/rendering-path-and-optimization",
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },
