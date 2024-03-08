@@ -113,6 +113,9 @@ export const CORE_WEB_VITALS = {
 
 export const PERFORMANCE_OPTIMIZATION = {
   PATH: "/performance-optimization",
+  HTML: {
+    PATH: "/performance-optimization/html",
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

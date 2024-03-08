@@ -550,7 +550,11 @@ const LCP = () => {
                   減少資源需要移動的距離
                   <p>
                     除了縮減資源大小以外，也可以讓伺服器盡可能靠近使用者，從而縮短載入時間。最佳做法是使用
-                    CDN
+                    <InnerLink
+                      href={`${PERFORMANCE_OPTIMIZATION.HTML.PATH}#cdn`}
+                    >
+                      CDN
+                    </InnerLink>
                   </p>
                   <p>
                     image CDN

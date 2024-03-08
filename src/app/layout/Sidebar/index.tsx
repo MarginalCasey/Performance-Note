@@ -252,6 +252,10 @@ const Sidebar = () => {
             >
               <List>
                 <ListItemLink
+                  text="一般 HTML 效能注意事項"
+                  path={PERFORMANCE_OPTIMIZATION.HTML.PATH}
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />
