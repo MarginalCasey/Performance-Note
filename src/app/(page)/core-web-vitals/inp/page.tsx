@@ -1,6 +1,6 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
-import InnerLink from "@/app/components/InnerLink";
+import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const INP = () => {
@@ -104,11 +104,11 @@ const INP = () => {
                   src="https://web.dev/static/articles/optimize-input-delay/image/a-visualization-how-long-af65d3963b8fb_960.png"
                   alt=""
                 />
-                <InnerLink
+                <InternalLink
                   href={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 >
                   分解 long tasks
-                </InnerLink>
+                </InternalLink>
               </li>
               <li>
                 注意互動重疊情形
@@ -133,13 +133,13 @@ const INP = () => {
               載入完畢後，瀏覽器必須先進行解析與編譯，接著才能執行。視程式碼的大小，這項作業可能會在
               main thread 執行 long task，導致互動上的延遲
             </p>
-            <InnerLink
+            <InternalLink
               href={
                 PERFORMANCE_OPTIMIZATION.SCRIPT_EVALUATION_AND_LONG_TASKS.PATH
               }
             >
               Script evaluation 與 long tasks
-            </InnerLink>
+            </InternalLink>
           </section>
           <section>
             <h4>優化 event callback</h4>
@@ -213,9 +213,9 @@ const INP = () => {
                   layout，而不是等到 event callback 執行完畢後才去進行，造成
                   long task。
                 </p>
-                <InnerLink href={CORE_WEB_VITALS.INP.LAYOUT.PATH}>
+                <InternalLink href={CORE_WEB_VITALS.INP.LAYOUT.PATH}>
                   避免大型、複雜的 layout 以及 layout thrashing
-                </InnerLink>
+                </InternalLink>
               </li>
             </ul>
           </section>
@@ -225,9 +225,9 @@ const INP = () => {
               <li>
                 最小化 DOM
                 <div>
-                  <InnerLink href={CORE_WEB_VITALS.INP.DOM_SIZE.PATH}>
+                  <InternalLink href={CORE_WEB_VITALS.INP.DOM_SIZE.PATH}>
                     DOM 的大小如何影響互動性
-                  </InnerLink>
+                  </InternalLink>
                 </div>
               </li>
               <li>

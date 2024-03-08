@@ -1,5 +1,5 @@
 import CodeBlock from "@/app/components/CodeBlock";
-import InnerLink from "@/app/components/InnerLink";
+import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS } from "@/app/path";
 
 const Layout = () => {
@@ -66,9 +66,9 @@ const Layout = () => {
             雖然建議盡可能避免 layout，但當不可避免時，就需要注意 DOM
             的大小以降低 layout 的成本。
           </p>
-          <InnerLink href={CORE_WEB_VITALS.INP.DOM_SIZE.PATH}>
+          <InternalLink href={CORE_WEB_VITALS.INP.DOM_SIZE.PATH}>
             DOM 的大小如何影響互動性
-          </InnerLink>
+          </InternalLink>
         </section>
         <section>
           <h3>避免強制同步 layout</h3>

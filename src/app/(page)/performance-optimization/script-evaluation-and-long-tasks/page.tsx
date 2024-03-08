@@ -1,6 +1,6 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
-import InnerLink from "@/app/components/InnerLink";
+import InternalLink from "@/app/components/InternalLink";
 
 const ScriptEvaluation = () => {
   return (
@@ -42,7 +42,7 @@ const ScriptEvaluation = () => {
             </li>
             <li>
               <code>type=module</code> 載入的 script 預設為{" "}
-              <InnerLink href="TODO">defer</InnerLink>
+              <InternalLink href="TODO">defer</InternalLink>
             </li>
           </ul>
           <br />

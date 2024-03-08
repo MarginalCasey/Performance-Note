@@ -1,7 +1,7 @@
 import Alert from "@/app/components/Alert";
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
-import InnerLink from "@/app/components/InnerLink";
+import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const LCP = () => {
@@ -35,38 +35,40 @@ const LCP = () => {
           <h4>哪些元素會列入考量</h4>
           <ul>
             <li>
-              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}>
                 包含文字節點或是其他行內文字元素的區塊元素
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
-              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}>
                 <code>{"<img>"}</code>
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
-              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}>
                 <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
-              <InnerLink
+              <InternalLink
                 href={CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH}
               >
                 透過 <code>url()</code> 載入的 background image
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
-              <InnerLink href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}>
+              <InternalLink
+                href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}
+              >
                 <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
-              <InnerLink
+              <InternalLink
                 href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_AUTOPLAY_FRAME.PATH}
               >
                 自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
-              </InnerLink>
+              </InternalLink>
             </li>
           </ul>
         </section>
@@ -104,7 +106,7 @@ const LCP = () => {
           <p>
             只有在元素已渲染且對使用者來說可見時，才能被視為最大內容元素。尚未載入的圖片不會被視為已渲染。使用
             web font 的文字節點在{" "}
-            <InnerLink href="TODO">font block period</InnerLink>{" "}
+            <InternalLink href="TODO">font block period</InternalLink>{" "}
             期間也不會被考慮進去。
           </p>
           <p>
@@ -239,7 +241,7 @@ const LCP = () => {
                       正確案例
                       <ul>
                         <li>
-                          <InnerLink
+                          <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.SRC
                                 .PATH
@@ -247,10 +249,10 @@ const LCP = () => {
                           >
                             LCP 元素是有 <code>src</code> 或 <code>srcset</code>{" "}
                             屬性的 <code>{"<img>"}</code>{" "}
-                          </InnerLink>
+                          </InternalLink>
                         </li>
                         <li>
-                          <InnerLink
+                          <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
                                 .CSS_BACKGROUND_IMAGE.PRELOAD.PATH
@@ -258,7 +260,7 @@ const LCP = () => {
                           >
                             LCP 元素使用 CSS background image，但圖片有透過{" "}
                             <code>{'<link rel="preload">'}</code> 預先載入
-                          </InnerLink>
+                          </InternalLink>
                         </li>
                         <li>
                           LCP 元素是使用 web font 的文字節點，但字型有透過{" "}
@@ -270,7 +272,7 @@ const LCP = () => {
                       錯誤案例
                       <ul>
                         <li>
-                          <InnerLink
+                          <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
                                 .DYNAMIC.PATH
@@ -278,10 +280,10 @@ const LCP = () => {
                           >
                             LCP 元素是透過 JavaScript 動態插入的{" "}
                             <code>{"<img>"}</code>{" "}
-                          </InnerLink>
+                          </InternalLink>
                         </li>
                         <li>
-                          <InnerLink
+                          <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.LAZY
                                 .PATH
@@ -291,17 +293,17 @@ const LCP = () => {
                             會隱藏其 <code>src</code> 或 <code>srcset</code>{" "}
                             屬性，使用 <code>data-src</code> 或
                             <code>data-srcset</code> 之類的自訂屬性取代
-                          </InnerLink>
+                          </InternalLink>
                         </li>
                         <li>
-                          <InnerLink
+                          <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
                                 .CSS_BACKGROUND_IMAGE.NO_PRELOAD.PATH
                             }
                           >
                             LCP 元素使用 CSS background image
-                          </InnerLink>
+                          </InternalLink>
                         </li>
                       </ul>
                       <p>
@@ -470,11 +472,11 @@ const LCP = () => {
                     <p>另一個類似的作法是 SSG。</p>
                   </li>
                   <li>
-                    <InnerLink
+                    <InternalLink
                       href={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                     >
                       分解 long tasks
-                    </InnerLink>
+                    </InternalLink>
                     <p>
                       即使 JavaScript 程式碼沒有
                       render-blocking，也不負責渲染元素，仍可能會延遲 LCP。
@@ -524,11 +526,11 @@ const LCP = () => {
                   減少資源需要移動的距離
                   <p>
                     除了縮減資源大小以外，也可以讓伺服器盡可能靠近使用者，從而縮短載入時間。最佳做法是使用
-                    <InnerLink
+                    <InternalLink
                       href={`${PERFORMANCE_OPTIMIZATION.HTML.PATH}#cdn`}
                     >
                       CDN
-                    </InnerLink>
+                    </InternalLink>
                   </p>
                   <p>
                     image CDN
@@ -565,9 +567,9 @@ const LCP = () => {
                     如果 LCP 資源為 web
                     font，除了縮減大小之外，可以考慮是否有必要在載入字型資源時
                     block rendering。如果將{" "}
-                    <InnerLink href="TODO">
+                    <InternalLink href="TODO">
                       <code>font-display</code>
-                    </InnerLink>{" "}
+                    </InternalLink>{" "}
                     值設為 <code>auto</code> 或 <code>block</code>{" "}
                     以外的任何值，在字型載入期間就一樣會顯示文字內容，LCP
                     就不會被 block 住。

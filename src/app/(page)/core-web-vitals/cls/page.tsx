@@ -1,6 +1,6 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
-import InnerLink from "@/app/components/InnerLink";
+import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS } from "@/app/path";
 
 const CLS = () => {
@@ -49,9 +49,9 @@ const CLS = () => {
             和 <code>height</code>{" "}
             屬性，確保在瀏覽器開始載入圖片前，已在頁面上分配足夠空間。這樣做可以盡量減少
             reflow 和 re-layout。
-            <InnerLink href={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE.PATH}>
+            <InternalLink href={CORE_WEB_VITALS.CLS.IMG.FIXED_SIZE.PATH}>
               範例
-            </InnerLink>
+            </InternalLink>
           </p>
           <CodeBlock language="xml">{`
   <img src="puppy.jpg" width="640" height="360" alt="Puppy with balloons">
@@ -59,11 +59,11 @@ const CLS = () => {
           <p>
             但是當 RWD 的概念被引入之後，開發人員開始省略 width 和 height
             屬性，轉而改用 CSS 調整圖片大小
-            <InnerLink
+            <InternalLink
               href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITHOUT_SIZE.PATH}
             >
               範例
-            </InnerLink>
+            </InternalLink>
           </p>
           <CodeBlock language="css">{`
   img {
@@ -82,9 +82,9 @@ const CLS = () => {
             現代的瀏覽器會根據圖片的 <code>width</code> 和 <code>height</code>{" "}
             屬性，設定圖片的預設寬高比。只要設定這些屬性並加入先前的
             CSS，即可防止版面發生位移。
-            <InnerLink href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE}>
+            <InternalLink href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE}>
               範例
-            </InnerLink>
+            </InternalLink>
           </p>
           <CodeBlock language="xml">{`
   <!-- set a 640:360 i.e a 16:9 aspect ratio -->
@@ -117,11 +117,11 @@ const CLS = () => {
               定義瀏覽器可以選擇的圖片及圖片大小。為確保可以設定{" "}
               <code>{"<img>"}</code> 的 <code>width</code> 和{" "}
               <code>height</code> 屬性，每張圖片應採用相同的長寬比。
-              <InnerLink
+              <InternalLink
                 href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE_IMAGES.WITH_SIZE.PATH}
               >
                 範例
-              </InnerLink>
+              </InternalLink>
             </p>
             <CodeBlock language="xml">{`
   <img
@@ -137,14 +137,14 @@ const CLS = () => {
             <h5>在不同螢幕下顯示不同寬高比的圖片</h5>
             <p>
               網頁可以針對較小的螢幕，顯示裁剪過的圖片，並在桌面版中顯示完整圖片
-              <InnerLink
+              <InternalLink
                 href={
                   CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.WITHOUT_SIZE
                     .PATH
                 }
               >
                 範例
-              </InnerLink>
+              </InternalLink>
             </p>
             <CodeBlock language="xml">{`
   <picture>
@@ -157,13 +157,13 @@ const CLS = () => {
               這些圖片可能採用不同的長寬比。Chrome、Firefox 和 Safari 現在支援在{" "}
               <code>picture</code> 元素的 <code>source</code> 上設定{" "}
               <code>width</code> 和 <code>height</code>
-              <InnerLink
+              <InternalLink
                 href={
                   CORE_WEB_VITALS.CLS.IMG.DIFFERENT_ASPECT_RATIO.WITH_SIZE.PATH
                 }
               >
                 範例
-              </InnerLink>
+              </InternalLink>
             </p>
             <CodeBlock language="xml">{`
   <picture>
@@ -228,16 +228,16 @@ const CLS = () => {
           <ul>
             <li>
               用網頁字型替換掉備用字型 (FOUT—flash of unstyled text){" "}
-              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.SWAP.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.CLS.FONT.SWAP.PATH}>
                 範例
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
               使用不可見的備用字型渲染文字，直到網頁字型可用後且讓文字變為可見
               (FOIT—flash of invisible text)
-              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.BLOCK.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.CLS.FONT.BLOCK.PATH}>
                 範例
-              </InnerLink>
+              </InternalLink>
             </li>
           </ul>
           <p>
@@ -248,13 +248,13 @@ const CLS = () => {
           <ul>
             <li>
               使用{" "}
-              <InnerLink href="TODO">
+              <InternalLink href="TODO">
                 <code>font-display: optional</code>
-              </InnerLink>{" "}
+              </InternalLink>{" "}
               可以避免 re-layout，因為網頁字型只有在可以立即載入時才會被使用。
-              <InnerLink href={CORE_WEB_VITALS.CLS.FONT.OPTIONAL.PATH}>
+              <InternalLink href={CORE_WEB_VITALS.CLS.FONT.OPTIONAL.PATH}>
                 範例
-              </InnerLink>
+              </InternalLink>
             </li>
             <li>
               使用適合的備用字型

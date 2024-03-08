@@ -1,7 +1,7 @@
 import { ArrowLeftEndOnRectangleIcon } from "@heroicons/react/24/solid";
 import type { AnchorHTMLAttributes, FC } from "react";
 
-const InnerLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
+const InternalLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   children,
   ...props
 }) => {
@@ -13,4 +13,4 @@ const InnerLink: FC<AnchorHTMLAttributes<HTMLAnchorElement>> = ({
   );
 };
 
-export default InnerLink;
+export default InternalLink;
