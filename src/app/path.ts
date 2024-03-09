@@ -161,6 +161,9 @@ export const PERFORMANCE_OPTIMIZATION = {
       PATH: "/demo/performance-optimization/web-fonts/font-display-optional",
     },
   },
+  CODE_SPLITTING: {
+    PATH: "/performance-optimization/code-splitting",
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

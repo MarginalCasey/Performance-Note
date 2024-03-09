@@ -351,6 +351,10 @@ const Sidebar = () => {
                   </List>
                 </AccordionItem>
                 <ListItemLink
+                  text="Code splitting"
+                  path={PERFORMANCE_OPTIMIZATION.CODE_SPLITTING.PATH}
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />
