@@ -32,42 +32,48 @@ const LCP = () => {
           />
         </section>
         <section>
-          <h4>哪些元素會列入考量</h4>
+          <h4 id="element">哪些元素會列入考量</h4>
           <ul>
             <li>
+              包含文字節點或是其他行內文字元素的區塊元素
               <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.TEXT.PATH}>
-                包含文字節點或是其他行內文字元素的區塊元素
+                範例
               </InternalLink>
             </li>
             <li>
+              <code>{"<img>"}</code>
               <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.IMG.PATH}>
-                <code>{"<img>"}</code>
+                範例
               </InternalLink>
             </li>
             <li>
+              <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
               <InternalLink href={CORE_WEB_VITALS.LCP.ELEMENTS.SVG_IMAGE.PATH}>
-                <code>{"<svg>"}</code> 裡面的 <code>{"<image>"}</code>
+                範例
               </InternalLink>
             </li>
             <li>
+              透過 <code>url()</code> 載入的 background image
               <InternalLink
                 href={CORE_WEB_VITALS.LCP.ELEMENTS.BACKGROUND_IMAGE.PATH}
               >
-                透過 <code>url()</code> 載入的 background image
+                範例
               </InternalLink>
             </li>
             <li>
+              <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
               <InternalLink
                 href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_POSTER.PATH}
               >
-                <code>{"<video>"}</code> 裡面的 <code>{"poster"}</code> 封面圖
+                範例
               </InternalLink>
             </li>
             <li>
+              自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
               <InternalLink
                 href={CORE_WEB_VITALS.LCP.ELEMENTS.VIDEO_AUTOPLAY_FRAME.PATH}
               >
-                自動播放的 <code>{"<video>"}</code> 所繪製的第一個 frame
+                範例
               </InternalLink>
             </li>
           </ul>
@@ -246,25 +252,27 @@ const LCP = () => {
                       正確案例
                       <ul>
                         <li>
+                          LCP 元素是有 <code>src</code> 或 <code>srcset</code>{" "}
+                          屬性的 <code>{"<img>"}</code>
                           <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.SRC
                                 .PATH
                             }
                           >
-                            LCP 元素是有 <code>src</code> 或 <code>srcset</code>{" "}
-                            屬性的 <code>{"<img>"}</code>{" "}
+                            範例
                           </InternalLink>
                         </li>
                         <li>
+                          LCP 元素使用 CSS background image，但圖片有透過{" "}
+                          <code>{'<link rel="preload">'}</code> 預先載入
                           <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
                                 .CSS_BACKGROUND_IMAGE.PRELOAD.PATH
                             }
                           >
-                            LCP 元素使用 CSS background image，但圖片有透過{" "}
-                            <code>{'<link rel="preload">'}</code> 預先載入
+                            範例
                           </InternalLink>
                         </li>
                         <li>
@@ -277,37 +285,40 @@ const LCP = () => {
                       錯誤案例
                       <ul>
                         <li>
+                          LCP 元素是透過 JavaScript 動態插入的{" "}
+                          <code>{"<img>"}</code>
                           <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG
                                 .DYNAMIC.PATH
                             }
                           >
-                            LCP 元素是透過 JavaScript 動態插入的{" "}
-                            <code>{"<img>"}</code>{" "}
+                            範例
                           </InternalLink>
                         </li>
                         <li>
+                          LCP 元素是透過 JavaScript library 延遲載入，library
+                          會隱藏其 <code>src</code> 或 <code>srcset</code>{" "}
+                          屬性，使用 <code>data-src</code> 或
+                          <code>data-srcset</code> 之類的自訂屬性取代
                           <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY.IMG.LAZY
                                 .PATH
                             }
                           >
-                            LCP 元素是透過 JavaScript library 延遲載入，library
-                            會隱藏其 <code>src</code> 或 <code>srcset</code>{" "}
-                            屬性，使用 <code>data-src</code> 或
-                            <code>data-srcset</code> 之類的自訂屬性取代
+                            範例
                           </InternalLink>
                         </li>
                         <li>
+                          LCP 元素使用 CSS background image
                           <InternalLink
                             href={
                               CORE_WEB_VITALS.LCP.RESOURCE_LOAD_DELAY
                                 .CSS_BACKGROUND_IMAGE.NO_PRELOAD.PATH
                             }
                           >
-                            LCP 元素使用 CSS background image
+                            範例
                           </InternalLink>
                         </li>
                       </ul>
