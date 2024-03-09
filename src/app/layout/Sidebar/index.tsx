@@ -266,6 +266,42 @@ const Sidebar = () => {
                   text="為瀏覽器提供 resource hint"
                   path={PERFORMANCE_OPTIMIZATION.RESOURCE_HINT.PATH}
                 />
+                <AccordionItem
+                  text="圖片最佳化"
+                  path={PERFORMANCE_OPTIMIZATION.IMAGE.PATH}
+                  visitable
+                >
+                  <List>
+                    <ListItemLink
+                      text="範例: 不同 DPR 時載入不同尺寸的圖片"
+                      path={PERFORMANCE_OPTIMIZATION.IMAGE.DPR_DEMO.PATH}
+                    />
+                    <ListItemLink
+                      text="範例: 根據 media 及 DPR 載入不同尺寸的圖片"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.IMAGE.MEDIA_AND_DPR_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: 使用 <picture> 處理圖片格式支援度"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.IMAGE
+                          .PICTURE_AND_DIFFERENT_TYPE_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: 使用 <picture> 根據 media 及 DPR 載入不同格式及尺寸的圖片"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.IMAGE
+                          .PICTURE_AND_DIFFERENT_SRCSET_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: loading='lazy'"
+                      path={PERFORMANCE_OPTIMIZATION.IMAGE.LAZY_LOAD_DEMO.PATH}
+                    />
+                  </List>
+                </AccordionItem>
                 <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}

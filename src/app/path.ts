@@ -122,6 +122,24 @@ export const PERFORMANCE_OPTIMIZATION = {
   RESOURCE_HINT: {
     PATH: "/performance-optimization/resource-hint",
   },
+  IMAGE: {
+    PATH: "/performance-optimization/image",
+    DPR_DEMO: {
+      PATH: "/demo/performance-optimization/image/dpr",
+    },
+    MEDIA_AND_DPR_DEMO: {
+      PATH: "/demo/performance-optimization/image/media-dpr",
+    },
+    PICTURE_AND_DIFFERENT_SRCSET_DEMO: {
+      PATH: "/demo/performance-optimization/image/picture-and-different-srcset",
+    },
+    PICTURE_AND_DIFFERENT_TYPE_DEMO: {
+      PATH: "/demo/performance-optimization/image/picture-and-different-type",
+    },
+    LAZY_LOAD_DEMO: {
+      PATH: "/demo/performance-optimization/image/lazy-load",
+    },
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },
