@@ -140,6 +140,12 @@ export const PERFORMANCE_OPTIMIZATION = {
       PATH: "/demo/performance-optimization/image/lazy-load",
     },
   },
+  VIDEO: {
+    PATH: "/performance-optimization/video",
+    FACADE_DEMO: {
+      PATH: "/demo/performance-optimization/video/facade",
+    },
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

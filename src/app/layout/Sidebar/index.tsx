@@ -302,6 +302,18 @@ const Sidebar = () => {
                     />
                   </List>
                 </AccordionItem>
+                <AccordionItem
+                  text="影片最佳化"
+                  path={PERFORMANCE_OPTIMIZATION.VIDEO.PATH}
+                  visitable
+                >
+                  <List>
+                    <ListItemLink
+                      text="範例: YouTube facade"
+                      path={PERFORMANCE_OPTIMIZATION.VIDEO.FACADE_DEMO.PATH}
+                    />
+                  </List>
+                </AccordionItem>
                 <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
