@@ -146,6 +146,21 @@ export const PERFORMANCE_OPTIMIZATION = {
       PATH: "/demo/performance-optimization/video/facade",
     },
   },
+  WEB_FONTS: {
+    PATH: "/performance-optimization/web-fonts",
+    FONT_DISPLAY_BLOCK_DEMO: {
+      PATH: "/demo/performance-optimization/web-fonts/font-display-block",
+    },
+    FONT_DISPLAY_SWAP_DEMO: {
+      PATH: "/demo/performance-optimization/web-fonts/font-display-swap",
+    },
+    FONT_DISPLAY_FALLBACK_DEMO: {
+      PATH: "/demo/performance-optimization/web-fonts/font-display-fallback",
+    },
+    FONT_DISPLAY_OPTIONAL_DEMO: {
+      PATH: "/demo/performance-optimization/web-fonts/font-display-optional",
+    },
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

@@ -314,6 +314,42 @@ const Sidebar = () => {
                     />
                   </List>
                 </AccordionItem>
+                <AccordionItem
+                  text="Web fonts 最佳化"
+                  path={PERFORMANCE_OPTIMIZATION.WEB_FONTS.PATH}
+                  visitable
+                >
+                  <List>
+                    <ListItemLink
+                      text="範例: font-display: block"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.WEB_FONTS
+                          .FONT_DISPLAY_BLOCK_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: font-display: swap"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.WEB_FONTS
+                          .FONT_DISPLAY_SWAP_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: font-display: fallback"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.WEB_FONTS
+                          .FONT_DISPLAY_FALLBACK_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: font-display: optional"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.WEB_FONTS
+                          .FONT_DISPLAY_OPTIONAL_DEMO.PATH
+                      }
+                    />
+                  </List>
+                </AccordionItem>
                 <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}

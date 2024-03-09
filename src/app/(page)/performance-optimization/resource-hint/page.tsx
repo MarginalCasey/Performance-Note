@@ -2,13 +2,13 @@ import Alert from "@/app/components/Alert";
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
-import { CORE_WEB_VITALS } from "@/app/path";
+import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const ResourceHint = () => {
   return (
     <div>
       <h1>為瀏覽器提供 resource hint</h1>
-      <section>
+      <section id="preconnect">
         <h3>preconnect</h3>
         <p>
           預期瀏覽器將會連線至特定的 cross origin 伺服器，在等待 HTML parser 或
@@ -85,7 +85,11 @@ const ResourceHint = () => {
         </p>
         <ul>
           <li>
-            <InternalLink href="TODO">字型</InternalLink>
+            <InternalLink
+              href={`${PERFORMANCE_OPTIMIZATION.WEB_FONTS.PATH}#preload`}
+            >
+              字型
+            </InternalLink>
           </li>
           <li>
             透過 <code>@import</code> 載入的 CSS
