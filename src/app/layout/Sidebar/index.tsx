@@ -358,6 +358,35 @@ const Sidebar = () => {
                   text="Lazy load"
                   path={PERFORMANCE_OPTIMIZATION.LAZY_LOAD.PATH}
                 />
+                <AccordionItem
+                  text="Prefetch 和 Prerender"
+                  path={PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER.PATH}
+                  visitable
+                >
+                  <List>
+                    <ListItemLink
+                      text="範例: Prefetch 頁面"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER
+                          .PREFETCH_DOCUMENT_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: 使用 Speculation Rules API Prefetch 頁面"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER
+                          .SPECULATION_RULES_API_PREFETCH_DOCUMENT_DEMO.PATH
+                      }
+                    />
+                    <ListItemLink
+                      text="範例: 使用 Speculation Rules API Prerender 頁面"
+                      path={
+                        PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER
+                          .SPECULATION_RULES_API_PRERENDER_DEMO.PATH
+                      }
+                    />
+                  </List>
+                </AccordionItem>
                 <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}

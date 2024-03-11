@@ -167,6 +167,18 @@ export const PERFORMANCE_OPTIMIZATION = {
   LAZY_LOAD: {
     PATH: "/performance-optimization/lazy-load",
   },
+  PREFETCH_AND_PRERENDER: {
+    PATH: "/performance-optimization/prefetch-and-prerender",
+    PREFETCH_DOCUMENT_DEMO: {
+      PATH: "/demo/performance-optimization/prefetch-and-prerender/prefetch-document",
+    },
+    SPECULATION_RULES_API_PREFETCH_DOCUMENT_DEMO: {
+      PATH: "/performance-optimization/prefetch-and-prerender/speculation-rules-api-prefetch-document",
+    }, // not working in iframe
+    SPECULATION_RULES_API_PRERENDER_DEMO: {
+      PATH: "/performance-optimization/prefetch-and-prerender/speculation-rules-api-prerender",
+    }, // not working in iframe
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },
