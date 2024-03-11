@@ -146,8 +146,10 @@
   }
 
   .content {
-    @apply mt-[18vh];
-    @apply mb-[30vh];
+    @apply mt-20;
+    @apply mb-[350px];
+    @apply sm:mt-28;
+    @apply sm:mb-[30vh];
     @apply px-4;
     @apply max-w-3xl;
     @apply mx-auto;
