@@ -97,6 +97,23 @@
     max-width: revert !important;
   }
 
+  .sidebar-wrapper {
+    @apply relative;
+    @apply transition-transform;
+  }
+
+  .sidebar-wrapper.closed {
+    @apply -translate-x-80;
+  }
+
+  .sidebar {
+    @apply overflow-y-auto;
+    @apply w-80;
+    @apply h-full;
+    @apply bg-gray-50;
+    @apply font-medium;
+  }
+
   .sidebar a {
     @apply hover:underline;
   }
@@ -104,6 +121,28 @@
   .main {
     @apply flex-1;
     @apply overflow-y-auto;
+    @apply transition-[margin];
+    @apply invisible;
+    @apply sm:visible;
+  }
+
+  .sidebar-wrapper.closed + .main {
+    @apply -ml-80;
+    @apply visible;
+  }
+
+  .toggle {
+    @apply absolute !important;
+    @apply left-full;
+    @apply top-1/2;
+    @apply -translate-y-1/2;
+    @apply max-h-none !important;
+    @apply w-6 !important;
+    @apply h-12 !important;
+    @apply text-gray-600 !important;
+    @apply hover:text-gray-900 !important;
+    @apply bg-gray-200;
+    @apply rounded-l-none !important;
   }
 
   .content {
