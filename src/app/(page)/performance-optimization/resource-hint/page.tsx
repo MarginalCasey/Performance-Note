@@ -126,7 +126,11 @@ const ResourceHint = () => {
       </section>
       <section>
         <h3>
-          <InternalLink href="TODO">prefetch</InternalLink>
+          <InternalLink
+            href={`${PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER.PATH}#prefetch`}
+          >
+            prefetch
+          </InternalLink>
         </h3>
         <p>
           <code>prefetch</code> 指令的用途是對 future navigations

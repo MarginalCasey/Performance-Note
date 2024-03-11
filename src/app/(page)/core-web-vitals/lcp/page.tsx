@@ -112,7 +112,11 @@ const LCP = () => {
           <p>
             只有在元素已渲染且對使用者來說可見時，才能被視為最大內容元素。尚未載入的圖片不會被視為已渲染。使用
             web font 的文字節點在{" "}
-            <InternalLink href="TODO">font block period</InternalLink>{" "}
+            <InternalLink
+              href={`${PERFORMANCE_OPTIMIZATION.WEB_FONTS.PATH}#block-period`}
+            >
+              font block period
+            </InternalLink>{" "}
             期間也不會被考慮進去。
           </p>
           <p>
@@ -587,7 +591,9 @@ const LCP = () => {
                     如果 LCP 資源為 web
                     font，除了縮減大小之外，可以考慮是否有必要在載入字型資源時
                     block rendering。如果將{" "}
-                    <InternalLink href="TODO">
+                    <InternalLink
+                      href={`${PERFORMANCE_OPTIMIZATION.WEB_FONTS.PATH}#font-display`}
+                    >
                       <code>font-display</code>
                     </InternalLink>{" "}
                     值設為 <code>auto</code> 或 <code>block</code>{" "}

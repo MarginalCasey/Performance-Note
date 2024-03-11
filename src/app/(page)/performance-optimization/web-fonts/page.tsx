@@ -154,7 +154,7 @@ const WebFonts = () => {
         <section>
           <p>字型顯示會分為三個階段</p>
           <ol>
-            <li>
+            <li id="block-period">
               Font block period
               <p>
                 字型尚未載入的話，會先以一個<b>不可見的備用字型</b>
@@ -173,7 +173,7 @@ const WebFonts = () => {
             </li>
           </ol>
         </section>
-        <section>
+        <section id="font-display">
           <h4>font-display 屬性值</h4>
           <ul>
             <li>
@@ -296,7 +296,7 @@ const WebFonts = () => {
                 </li>
               </ul>
             </li>
-            <li>
+            <li id="optional">
               optional
               <ul>
                 <li>

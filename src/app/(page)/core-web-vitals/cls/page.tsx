@@ -1,7 +1,7 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
-import { CORE_WEB_VITALS } from "@/app/path";
+import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
 
 const CLS = () => {
   return (
@@ -248,7 +248,9 @@ const CLS = () => {
           <ul>
             <li>
               使用{" "}
-              <InternalLink href="TODO">
+              <InternalLink
+                href={`${PERFORMANCE_OPTIMIZATION.WEB_FONTS.PATH}#optional`}
+              >
                 <code>font-display: optional</code>
               </InternalLink>{" "}
               可以避免 re-layout，因為網頁字型只有在可以立即載入時才會被使用。
