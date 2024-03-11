@@ -122,13 +122,13 @@
     @apply flex-1;
     @apply overflow-y-auto;
     @apply transition-[margin];
-    @apply invisible;
-    @apply sm:visible;
+    @apply hidden;
+    @apply sm:block;
   }
 
   .sidebar-wrapper.closed + .main {
     @apply -ml-80;
-    @apply visible;
+    @apply block;
   }
 
   .toggle {

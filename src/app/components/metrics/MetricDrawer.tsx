@@ -16,7 +16,7 @@ const MetricDrawer: FC<MetricDrawerProps> = ({ name, children }) => {
 
   return (
     <>
-      <div className="absolute top-4 right-4">
+      <div className="fixed top-4 right-4">
         <Button onClick={openDrawer}>{name}</Button>
       </div>
       <Drawer
