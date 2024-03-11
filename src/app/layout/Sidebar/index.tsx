@@ -402,6 +402,10 @@ const Sidebar = () => {
                       .PATH
                   }
                 />
+                <ListItemLink
+                  text="Event loop 與 rendering"
+                  path={PERFORMANCE_OPTIMIZATION.EVENT_LOOP.PATH}
+                />
               </List>
             </AccordionItem>
           </List>

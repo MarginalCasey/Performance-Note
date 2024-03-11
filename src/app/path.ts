@@ -188,4 +188,7 @@ export const PERFORMANCE_OPTIMIZATION = {
   SCRIPT_EVALUATION_AND_LONG_TASKS: {
     PATH: "/performance-optimization/script-evaluation-and-long-tasks",
   },
+  EVENT_LOOP: {
+    PATH: "/performance-optimization/event-loop",
+  },
 } satisfies Route;
