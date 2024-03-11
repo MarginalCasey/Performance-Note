@@ -13,12 +13,19 @@ import {
   ThemeProvider,
   Typography,
 } from "@material-tailwind/react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import AccordionItem from "./AccordionItem";
 import ListItemLink from "./ListItemLink";
 
 const Sidebar = () => {
   const [open, setOpen] = useState(true);
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      if (window.matchMedia("(min-width: 540px)").matches) return;
+      setOpen(false);
+    }
+  }, []);
 
   const toggleDrawer = () => setOpen((prev) => !prev);
 
