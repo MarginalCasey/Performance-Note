@@ -179,6 +179,9 @@ export const PERFORMANCE_OPTIMIZATION = {
       PATH: "/performance-optimization/prefetch-and-prerender/speculation-rules-api-prerender",
     }, // not working in iframe
   },
+  WEB_WORKERS: {
+    PATH: "/performance-optimization/web-workers",
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

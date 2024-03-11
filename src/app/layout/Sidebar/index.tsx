@@ -388,6 +388,10 @@ const Sidebar = () => {
                   </List>
                 </AccordionItem>
                 <ListItemLink
+                  text="Web workers 總覽"
+                  path={PERFORMANCE_OPTIMIZATION.WEB_WORKERS.PATH}
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />
