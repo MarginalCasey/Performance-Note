@@ -355,6 +355,10 @@ const Sidebar = () => {
                   path={PERFORMANCE_OPTIMIZATION.CODE_SPLITTING.PATH}
                 />
                 <ListItemLink
+                  text="Lazy load"
+                  path={PERFORMANCE_OPTIMIZATION.LAZY_LOAD.PATH}
+                />
+                <ListItemLink
                   text="分解 long task"
                   path={PERFORMANCE_OPTIMIZATION.BREAK_UP_LONG_TASKS.PATH}
                 />

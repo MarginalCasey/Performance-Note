@@ -164,6 +164,9 @@ export const PERFORMANCE_OPTIMIZATION = {
   CODE_SPLITTING: {
     PATH: "/performance-optimization/code-splitting",
   },
+  LAZY_LOAD: {
+    PATH: "/performance-optimization/lazy-load",
+  },
   BREAK_UP_LONG_TASKS: {
     PATH: "/performance-optimization/break-up-long-tasks",
   },

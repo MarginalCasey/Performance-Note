@@ -207,7 +207,7 @@ const Image = () => {
           `}
         </CodeBlock>
       </section>
-      <section>
+      <section id="lazy-load">
         <h3>Lazy loading</h3>
         <p>
           <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">
