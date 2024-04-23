@@ -3,6 +3,16 @@ interface Route {
   [key: string]: string | Route;
 }
 
+export const getPaths = (route: Route): string[] => {
+  const paths = [route.PATH];
+  for (const key in route) {
+    if (typeof route[key] === "object") {
+      paths.push(...getPaths(route[key] as Route));
+    }
+  }
+  return paths;
+};
+
 export const CORE_WEB_VITALS = {
   PATH: "/core-web-vitals",
   LCP: {
