@@ -65,7 +65,9 @@ export const CORE_WEB_VITALS = {
         WITHOUT_SIZE: {
           PATH: "/demo/core-web-vitals/cls/img/responsive/without-size",
         },
-        WITH_SIZE: "/demo/core-web-vitals/cls/img/responsive/with-size",
+        WITH_SIZE: {
+          PATH: "/demo/core-web-vitals/cls/img/responsive/with-size",
+        },
       },
       RESPONSIVE_IMAGES: {
         PATH: "/demo/core-web-vitals/cls/img/responsive-images",

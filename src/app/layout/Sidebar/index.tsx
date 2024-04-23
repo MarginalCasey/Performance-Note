@@ -212,6 +212,7 @@ const Sidebar = () => {
                                 text="有設定寬高"
                                 path={
                                   CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE
+                                    .PATH
                                 }
                               />
                             </List>

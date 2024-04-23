@@ -82,7 +82,9 @@ const CLS = () => {
             現代的瀏覽器會根據圖片的 <code>width</code> 和 <code>height</code>{" "}
             屬性，設定圖片的預設寬高比。只要設定這些屬性並加入先前的
             CSS，即可防止版面發生位移。
-            <InternalLink href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE}>
+            <InternalLink
+              href={CORE_WEB_VITALS.CLS.IMG.RESPONSIVE.WITH_SIZE.PATH}
+            >
               範例
             </InternalLink>
           </p>
