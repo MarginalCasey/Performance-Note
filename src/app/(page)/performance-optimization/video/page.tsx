@@ -3,13 +3,22 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "影片最佳化",
+    description:
+      "影片來源 | 多種格式 | poster 屬性 | 自動播放 | 手動播放 | 嵌入第三方服務影片",
+  };
+};
 
 const Video = () => {
   return (
     <div>
       <h1>影片最佳化</h1>
       <section>
-        <h3>影片來源</h3>
+        <h3 id="video_source_files">影片來源</h3>
         <p>
           使用媒體檔案時，在作業系統中識別的檔案 (<code>.mp4</code>、
           <code>.webm</code> 等) 稱為 container。container 包含一或多個
@@ -26,7 +35,7 @@ const Video = () => {
         </p>
       </section>
       <section>
-        <h3>多種格式</h3>
+        <h3 id="multiple_formats">多種格式</h3>
         <p>
           使用影片檔案時，可以指定多種格式可以做為備用選項，在不支援所有新格式的瀏覽器中使用
         </p>
@@ -38,7 +47,7 @@ const Video = () => {
         `}</CodeBlock>
       </section>
       <section>
-        <h3>poster 屬性</h3>
+        <h3 id="the_poster_attribute">poster 屬性</h3>
         <p>
           使用 <code>{"<video>"}</code> 元素上的{" "}
           <a href="https://developer.mozilla.org/docs/Web/HTML/Element/video#attr-poster">
@@ -54,7 +63,9 @@ const Video = () => {
         `}</CodeBlock>
         <p>
           <code>poster</code> 圖片會被列為{" "}
-          <InternalLink href={`${CORE_WEB_VITALS.LCP.PATH}#element`}>
+          <InternalLink
+            href={`${CORE_WEB_VITALS.LCP.PATH}#what-elements-are-considered`}
+          >
             LCP 的候選名單
           </InternalLink>
         </p>
@@ -70,7 +81,7 @@ const Video = () => {
         `}</CodeBlock>
       </section>
       <section>
-        <h3>自動播放</h3>
+        <h3 id="autoplay">自動播放</h3>
         <p>
           相較於 GIF 動畫，<code>{"<video>"}</code>{" "}
           的檔案通常更小，可以使用自動播放的 <code>{"<video>"}</code> 來取代 GIF
@@ -101,7 +112,7 @@ const Video = () => {
         </p>
       </section>
       <section>
-        <h3>手動播放</h3>
+        <h3 id="user-initiated_playback">手動播放</h3>
         <p>
           一般來說，瀏覽器會在 parse HTML 遇到 <code>{"<video>"}</code>{" "}
           時就開始下載
@@ -129,7 +140,7 @@ const Video = () => {
         </ul>
       </section>
       <section>
-        <h3>嵌入第三方服務影片</h3>
+        <h3 id="embeds">嵌入第三方服務影片</h3>
         <p>
           第三方服務可以提供較佳的影片播放品質，但是嵌入式影片播放器所需載入的額外資源可能會對網頁效能產生影響
         </p>

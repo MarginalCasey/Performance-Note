@@ -6,6 +6,7 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: "前端效能優化筆記",
+  description: "Frontend performance optimization notes with test examples",
 };
 
 export default function RootLayout({

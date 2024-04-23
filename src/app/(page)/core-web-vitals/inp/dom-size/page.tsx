@@ -1,4 +1,13 @@
 import ExternalLink from "@/app/components/ExternalLink";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "DOM 的大小如何影響互動性",
+    description:
+      "大型 DOM 對頁面效能有何影響 | 透過 lazy load 載入內容 | 降低 CSS selector 的複雜度 | 使用 content-visibility 屬性",
+  };
+};
 
 const DOM = () => {
   return (
@@ -7,7 +16,9 @@ const DOM = () => {
       <section>
         <p>DOM 愈大，初始渲染的成本以及後續更新的成本就愈高</p>
         <section>
-          <h3>大型 DOM 對頁面效能有何影響</h3>
+          <h3 id="how_do_large_doms_affect_page_performance">
+            大型 DOM 對頁面效能有何影響
+          </h3>
           <ol>
             <li>
               初始渲染時，與 DOM 結構相似的 CSSOM 會被建立，隨著 CSSOM
@@ -28,9 +39,9 @@ const DOM = () => {
           </ol>
         </section>
         <section>
-          <h3>其他策略</h3>
+          <h3 id="other_strategies_to_consider">其他策略</h3>
           <section>
-            <h4>透過 lazy load 載入內容</h4>
+            <h4 id="lazy_load">透過 lazy load 載入內容</h4>
             <p>
               在載入網頁時拿掉可視範圍外的內容，並在後續互動時再把它們加入 DOM
               中，這會讓渲染更加快速，讓互動更不容易因為 main thread
@@ -38,7 +49,9 @@ const DOM = () => {
             </p>
           </section>
           <section>
-            <h4>降低 CSS selector 的複雜度</h4>
+            <h4 id="limit_css_selector_complexity">
+              降低 CSS selector 的複雜度
+            </h4>
             <p>
               瀏覽器在 parse selector 時，必須遍歷 DOM tree 去確認 selector
               是否可套用到元素之上。當 selector
@@ -47,7 +60,9 @@ const DOM = () => {
             </p>
           </section>
           <section>
-            <h4>使用 content-visibility 屬性</h4>
+            <h4 id="use_the_content-visibility_property">
+              使用 content-visibility 屬性
+            </h4>
             <p>
               透過實驗性質的{" "}
               <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/CSS/content-visibility">

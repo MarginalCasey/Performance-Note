@@ -2,19 +2,27 @@ import Alert from "@/app/components/Alert";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "關鍵渲染路徑與資源載入最佳化",
+    description: "了解關鍵路徑 | 資源載入最佳化",
+  };
+};
 
 const RenderingPathAndOptimization = () => {
   return (
     <div>
       <h1>關鍵渲染路徑與資源載入最佳化</h1>
       <section>
-        <h3>了解關鍵路徑</h3>
+        <h3 id="understanding-the-critical-path">了解關鍵路徑</h3>
         <p>
           關鍵渲染路徑 (critical rendering path)
           為瀏覽器執行初次渲染之前所採取的步驟順序
         </p>
         <section>
-          <h4>關鍵渲染路徑</h4>
+          <h4 id="the_critical_rendering_path">關鍵渲染路徑</h4>
           <p>渲染路徑包含</p>
           <div className="flex items-stretch">
             <ol className="flex flex-col justify-between">
@@ -39,7 +47,9 @@ const RenderingPathAndOptimization = () => {
           </p>
         </section>
         <section>
-          <h4>關鍵渲染路徑上有哪些資源</h4>
+          <h4 id="what_resources_are_on_the_critical_rendering_path">
+            關鍵渲染路徑上有哪些資源
+          </h4>
           <p>
             瀏覽器需要等待一些重要資源下載完成後，才能完成初次渲染。這些資源包括
           </p>
@@ -62,7 +72,7 @@ const RenderingPathAndOptimization = () => {
           </ul>
         </section>
         <section>
-          <h4>Render-Blocking 的資源</h4>
+          <h4 id="render-blocking_resources">Render-Blocking 的資源</h4>
           <p>
             CSS 預設為 render-blocking，瀏覽器在發現 CSS 時會暫停渲染直到 CSS
             被下載及處理完畢，但暫停渲染並不會影響瀏覽器繼續 parse HTML
@@ -78,7 +88,7 @@ const RenderingPathAndOptimization = () => {
           </p>
         </section>
         <section>
-          <h4>Parser-Blocking 的資源</h4>
+          <h4 id="parser-blocking_resources">Parser-Blocking 的資源</h4>
           <p>
             JavaScript 預設為 parser-blocking，瀏覽器在發現 JavaScript 時會暫停
             parse HTML 直到 JavaScript 被下載及執行完畢，並且 parser-blocking
@@ -98,9 +108,9 @@ const RenderingPathAndOptimization = () => {
           </p>
         </section>
         <section>
-          <h3>資源載入最佳化</h3>
-          <section id="preload_scanner">
-            <h4>Preload scanner</h4>
+          <h3 id="optimize-resource-loading">資源載入最佳化</h3>
+          <section>
+            <h4 id="preload_scanner">Preload scanner</h4>
             <p>
               如果要利用 preload scanner，伺服器傳送的 HTML
               應包含重要資源。preload scanner 無法處理
@@ -133,7 +143,7 @@ const RenderingPathAndOptimization = () => {
             </p>
           </section>
           <section>
-            <h4>CSS</h4>
+            <h4 id="css">CSS</h4>
             <ul>
               <li>Minification</li>
               <li>
@@ -175,7 +185,7 @@ const RenderingPathAndOptimization = () => {
             </ul>
           </section>
           <section>
-            <h4>JavaScript</h4>
+            <h4 id="javascript">JavaScript</h4>
             <ul>
               <li>
                 async 與 defer

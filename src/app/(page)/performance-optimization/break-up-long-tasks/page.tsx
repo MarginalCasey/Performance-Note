@@ -1,12 +1,20 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "分解 long task",
+    description: "未分解的單一 task | 分解 Task 的方式 | 目前 API 的不足",
+  };
+};
 
 const LongTasks = () => {
   return (
     <div>
       <h1>分解 long task</h1>
       <section>
-        <h3>未分解的單一 task</h3>
+        <h3 id="single_long_task">未分解的單一 task</h3>
         <CodeBlock language="javascript">
           {`
   function saveSettings () {
@@ -24,9 +32,9 @@ const LongTasks = () => {
         />
       </section>
       <section>
-        <h3>分解 Task 的方式</h3>
+        <h3 id="how-to">分解 Task 的方式</h3>
         <section>
-          <h4>用 setTimeout 手動延遲</h4>
+          <h4 id="defer-code-execution">用 setTimeout 手動延遲</h4>
           <CodeBlock language="javascript">
             {`
   function saveSettings () {
@@ -45,7 +53,7 @@ const LongTasks = () => {
           </CodeBlock>
         </section>
         <section>
-          <h4>使用 async/await 建立 yield points</h4>
+          <h4 id="async-await">使用 async/await 建立 yield points</h4>
           <CodeBlock language="javascript">
             {`
   function yieldToMain () {
@@ -87,7 +95,7 @@ const LongTasks = () => {
           />
         </section>
         <section>
-          <h4>只在有需要時 yield</h4>
+          <h4 id="isinputpending">只在有需要時 yield</h4>
           <p>
             透過{" "}
             <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduling/isInputPending">
@@ -130,7 +138,7 @@ const LongTasks = () => {
         </section>
       </section>
       <section>
-        <h3>目前 API 的不足</h3>
+        <h3 id="experimental">目前 API 的不足</h3>
         <section>
           <p>
             上述做法雖然可以做到分解 task，但是新的 task 一律會被塞進 task queue
@@ -138,7 +146,7 @@ const LongTasks = () => {
           </p>
         </section>
         <section>
-          <h4>Scheduler API</h4>
+          <h4 id="scheduler-api">Scheduler API</h4>
           <p>
             目前僅 chromium 瀏覽器支援的{" "}
             <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/Scheduler">
@@ -182,7 +190,7 @@ const LongTasks = () => {
           </ul>
         </section>
         <section>
-          <h4>scheduler.yield</h4>
+          <h4 id="scheduler_yield">scheduler.yield</h4>
           <p>
             目前還是實驗性質的{" "}
             <ExternalLink href="https://developer.chrome.com/blog/introducing-scheduler-yield-origin-trial">

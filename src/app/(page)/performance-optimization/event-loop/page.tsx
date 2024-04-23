@@ -1,6 +1,14 @@
 import Alert from "@/app/components/Alert";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Event loop 與 rendering",
+    description: "定義 | 流程 (簡化版)",
+  };
+};
 
 const EventLoop = () => {
   return (
@@ -12,13 +20,13 @@ const EventLoop = () => {
           src="https://miro.medium.com/v2/resize:fit:1400/format:webp/1*FzpTJ1dk8EYPZx81_q6fgg.png"
           alt=""
         />
-        <h3>定義</h3>
+        <h3 id="definition">定義</h3>
         <p>
           user agents 透過 event loop 來協調 events, user interaction, scripts,
           rendering, networking
         </p>
         <section>
-          <h4>event loop</h4>
+          <h4 id="event_loop">event loop</h4>
           <ul>
             <li>包含一或多個 task queues</li>
             <li>
@@ -37,18 +45,18 @@ const EventLoop = () => {
           </ul>
         </section>
         <section>
-          <h4>task queues</h4>
+          <h4 id="task_queues">task queues</h4>
           <ul>
             <li>一個 set 的 tasks</li>
             <li>包含一或多個 task source</li>
           </ul>
         </section>
         <section>
-          <h4>task source</h4>
+          <h4 id="task_source">task source</h4>
           <p>對應一個特定的 task queue</p>
         </section>
         <section>
-          <h4>task</h4>
+          <h4 id="task">task</h4>
           <p>來自一個特定的 task source</p>
         </section>
         <Alert type="info">
@@ -66,14 +74,16 @@ const EventLoop = () => {
         </Alert>
       </section>
       <section>
-        <h3>流程 (簡化版)</h3>
+        <h3 id="flow">流程 (簡化版)</h3>
         <p>
           <ExternalLink href="https://html.spec.whatwg.org/multipage/webappapis.html#event-loop-processing-model">
             HTML Standard
           </ExternalLink>
         </p>
         <section>
-          <h4>只要 event loop 存在便必須循環執行以下步驟</h4>
+          <h4 id="continually_run_through_the_following_steps ">
+            只要 event loop 存在便必須循環執行以下步驟
+          </h4>
           <ol>
             <li>由 user agent 挑選出一個 task queue</li>
             <li>
@@ -120,7 +130,7 @@ const EventLoop = () => {
           </ol>
         </section>
         <section>
-          <h4>
+          <h4 id="run_the_following_in_parallel">
             window event loop 必須<code>並行</code>執行以下步驟
           </h4>
           <ol>
@@ -168,8 +178,8 @@ const EventLoop = () => {
               </ol>
             </li>
           </ol>
-          <section id="rendering-opportunity">
-            <h5>rendering opportunity</h5>
+          <section>
+            <h5 id="rendering-opportunity">rendering opportunity</h5>
             <p>
               如果 user agent 當前能夠向使用者呈現一個 navigable
               的內容，則它就具有 rendering opportunity，這取決於硬體的刷新率以及

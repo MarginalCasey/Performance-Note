@@ -1,6 +1,15 @@
 import CodeBlock from "@/app/components/CodeBlock";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "避免大型、複雜的 layout 以及 layout thrashing",
+    description:
+      "盡可能避免 layout | 避免強制同步 layout | 避免 layout thrashing",
+  };
+};
 
 const Layout = () => {
   return (
@@ -15,7 +24,7 @@ const Layout = () => {
           <li>DOM 的複雜度</li>
         </ol>
         <section>
-          <h3>總結</h3>
+          <h3 id="summary">總結</h3>
           <ol>
             <li>Layout 對互動延遲時間有直接影響</li>
             <li>Layout 的範圍通常為整份文件</li>
@@ -27,7 +36,7 @@ const Layout = () => {
           </ol>
         </section>
         <section>
-          <h3>盡可能避免 layout</h3>
+          <h3 id="avoid_layout_wherever_possible">盡可能避免 layout</h3>
           <CodeBlock language="css">
             {`
   .box {
@@ -71,7 +80,7 @@ const Layout = () => {
           </InternalLink>
         </section>
         <section>
-          <h3>避免強制同步 layout</h3>
+          <h3 id="avoid_forced_synchronous_layouts">避免強制同步 layout</h3>
           <img
             src="https://web.dev/static/articles/avoid-large-complex-layouts-and-layout-thrashing/image/using-flexbox-layout-0c9955c54a296_960.jpg"
             alt=""
@@ -123,7 +132,7 @@ const Layout = () => {
           </CodeBlock>
         </section>
         <section>
-          <h3>避免 layout thrashing</h3>
+          <h3 id="avoid_layout_thrashing">避免 layout thrashing</h3>
           <p>當大量的強制同步 layout 發生時，會造成所謂的 layout thrashing。</p>
           <CodeBlock language="javascript">
             {`

@@ -2,6 +2,15 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Web workers 總覽",
+    description:
+      "啟動 web worker | Web worker 的限制 | Web worker 如何與 window 溝通",
+  };
+};
 
 const WebWorkers = () => {
   return (
@@ -26,14 +35,14 @@ const WebWorkers = () => {
         </p>
       </section>
       <section>
-        <h3>啟動 web worker</h3>
+        <h3 id="how_a_web_worker_is_launched">啟動 web worker</h3>
         <p>指定 web worker 程式碼的位置，讓瀏覽器載入並建立一個新的 thread</p>
         <CodeBlock language="javascript">{`
   const myWebWorker = new Worker("/js/my-web-worker.js");
         `}</CodeBlock>
       </section>
       <section>
-        <h3>Web worker 的限制</h3>
+        <h3 id="web_worker_limitations">Web worker 的限制</h3>
         <ul>
           <li>無法直接存取 DOM</li>
           <li>
@@ -47,7 +56,9 @@ const WebWorkers = () => {
         </ul>
       </section>
       <section>
-        <h3>Web worker 如何與 window 溝通</h3>
+        <h3 id="how_web_workers_talk_to_the_window">
+          Web worker 如何與 window 溝通
+        </h3>
         <p>
           Web worker 透過 <code>postMessage</code> 與 main thread 上的{" "}
           <code>window</code> 溝通

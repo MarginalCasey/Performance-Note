@@ -2,13 +2,22 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Cumulative Layout Shift (CLS)",
+    description:
+      "什麼是 CLS | CLS 的常見原因 | 確認網頁符合 bfcache 的資格，藉此減少 CLS",
+  };
+};
 
 const CLS = () => {
   return (
     <div>
       <h1>Cumulative Layout Shift (CLS)</h1>
       <section>
-        <h3>什麼是 CLS</h3>
+        <h3 id="what-is-cls">什麼是 CLS</h3>
         <section>
           <p>
             對於使用者輸入內容 500
@@ -32,9 +41,9 @@ const CLS = () => {
         </section>
       </section>
       <section>
-        <h3>CLS 的常見原因</h3>
+        <h3 id="common-causes-of-cls">CLS 的常見原因</h3>
         <section>
-          <h4>沒有尺寸的圖片</h4>
+          <h4 id="images-without-dimensions">沒有尺寸的圖片</h4>
           <p>
             對圖片和影片元素加上 <code>width</code> 和 <code>height</code>{" "}
             或是透過 CSS 的{" "}
@@ -177,7 +186,7 @@ const CLS = () => {
           </section>
         </section>
         <section>
-          <h4>廣告、插件和其他延遲載入的內容</h4>
+          <h4 id="late-loaded-content">廣告、插件和其他延遲載入的內容</h4>
           <ul>
             <li>
               預留空間給延遲載入的內容
@@ -219,13 +228,13 @@ const CLS = () => {
           </ul>
         </section>
         <section>
-          <h4>動畫</h4>
+          <h4 id="animation">動畫</h4>
           <a href="https://web.dev/articles/animations-guide" target="__blank">
             Animation Guides
           </a>
         </section>
         <section>
-          <h4>網頁字型</h4>
+          <h4 id="web-fonts">網頁字型</h4>
           <p>網頁字型的下載與渲染通常的處理方式是</p>
           <ul>
             <li>
@@ -310,7 +319,9 @@ const CLS = () => {
         </section>
       </section>
       <section>
-        <h3>確認網頁符合 bfcache 的資格，藉此減少 CLS</h3>
+        <h3 id="reduce-cls-by-ensuring-pages-are-eligible-for-the-bfcache">
+          確認網頁符合 bfcache 的資格，藉此減少 CLS
+        </h3>
         <p>
           如要維持低 CLS 分數，有個有效的技巧，就是確保網頁適用{" "}
           <a href="https://web.dev/articles/bfcache">back/forward cache</a>{" "}

@@ -1,20 +1,29 @@
 import CodeBlock from "@/app/components/CodeBlock";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "一般 HTML 效能注意事項",
+    description:
+      "減少重新導向次數 | 快取 HTML response | 測量伺服器 response time | End To End 壓縮 | CDN",
+  };
+};
 
 const HTML = () => {
   return (
     <div>
       <h1>一般 HTML 效能注意事項</h1>
       <section>
-        <h3>減少重新導向次數</h3>
+        <h3 id="minimize_redirects">減少重新導向次數</h3>
         <p>
           當伺服器回 <code>301 Moved Permanently</code> 或是{" "}
           <code>301 Found</code> 時，瀏覽器必須重發 HTTP request 到新的 location
         </p>
       </section>
       <section>
-        <h3>快取 HTML response</h3>
+        <h3 id="cache_html_responses">快取 HTML response</h3>
         <section>
-          <h4>Etag</h4>
+          <h4 id="etag">Etag</h4>
           <p>
             Response Headers 回傳 <code>etag</code>
           </p>
@@ -34,7 +43,7 @@ const HTML = () => {
           </p>
         </section>
         <section>
-          <h4>Last-Modified</h4>
+          <h4 id="last_modified">Last-Modified</h4>
           <p>
             Response Headers 回傳 <code>last-modified</code>
           </p>
@@ -51,7 +60,7 @@ const HTML = () => {
           </p>
         </section>
         <section>
-          <h4>max-age</h4>
+          <h4 id="max_age">max-age</h4>
           <p>
             Response Headers 回傳 <code>max-age=N</code>
           </p>
@@ -67,7 +76,7 @@ const HTML = () => {
         </section>
       </section>
       <section>
-        <h3>測量伺服器 response time</h3>
+        <h3 id="measure_server_response_times">測量伺服器 response time</h3>
         <p>
           可以在伺服器端回傳 <code>Server-Timing</code> response header
           提供相關資訊
@@ -79,7 +88,7 @@ const HTML = () => {
         </CodeBlock>
       </section>
       <section>
-        <h3>End To End 壓縮</h3>
+        <h3 id="compression">End To End 壓縮</h3>
         <p>
           基於文字的回應（例如 HTML、JavaScript、CSS 和
           SVG）應進行壓縮，以減少其在網路上的傳輸大小，以便更快地下載。
@@ -137,8 +146,8 @@ const HTML = () => {
           </li>
         </ul>
       </section>
-      <section id="cdn">
-        <h3>CDN</h3>
+      <section>
+        <h3 id="content_delivery_networks_cdns">CDN</h3>
         <p>
           CDN
           是一種分散式伺服器網路，可從原始伺服器快取資源，進而從實際位置較近的邊緣伺服器提供資源。使用者的實際所在位置可縮短封包往返時間

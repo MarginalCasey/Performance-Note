@@ -1,3 +1,12 @@
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Code Splitting",
+    description: "獨立抽離第三方套件 | 動態載入模組",
+  };
+};
+
 const CodeSplitting = () => {
   return (
     <div>
@@ -9,9 +18,9 @@ const CodeSplitting = () => {
         chink，又或是對一些不常變動的 chunk 個別做快取，來達到載入效能的優化
       </p>
       <section>
-        <h3>常見的 Code Splitting 做法</h3>
+        <h3 id="common_practices">常見的 Code Splitting 做法</h3>
         <section>
-          <h4>獨立抽離第三方套件</h4>
+          <h4 id="extract_third-party_packages">獨立抽離第三方套件</h4>
           <ul>
             <li>
               將所有第三方套件打包為單一檔案
@@ -36,7 +45,7 @@ const CodeSplitting = () => {
           </ul>
         </section>
         <section>
-          <h4>動態載入模組</h4>
+          <h4 id="dynamic_import">動態載入模組</h4>
           <ul>
             <li>根據路由做 Dynamic Import</li>
             <li>針對肥大套件做 Dynamic Import</li>

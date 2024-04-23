@@ -2,15 +2,27 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Script evaluation 與 long tasks",
+    description: "script 與 evaluate 的 task 之間的關係 | 取捨與注意事項",
+  };
+};
 
 const ScriptEvaluation = () => {
   return (
     <div>
       <h1>Script evaluation 與 long tasks</h1>
       <section>
-        <h3>script 與 evaluate 的 task 之間的關係</h3>
+        <h3 id="the_relationship_between_scripts_and_the_tasks_that_evaluate_them">
+          script 與 evaluate 的 task 之間的關係
+        </h3>
         <section>
-          <h4>{"透過 <script> 載入的 script"}</h4>
+          <h4 id="loading_scripts_with_the_script_element">
+            {"透過 <script> 載入的 script"}
+          </h4>
           <p>
             每個 {"<script>"} 都會啟動一個 evaluate 的 task，在 Chromium,
             Safari, Firefox 上都是一樣。 拆分程式碼為多個小的 script
@@ -22,7 +34,9 @@ const ScriptEvaluation = () => {
           />
         </section>
         <section>
-          <h4>{"透過 <script type=”module”>載入的 script"}</h4>
+          <h4 id="loading_scripts_with_the_script_element_and_the_typemodule_attribute">
+            {"透過 <script type=”module”>載入的 script"}
+          </h4>
           <p>在 Chromium 瀏覽器中，會先對每個模組執行 Compile Module 的 task</p>
           <img
             src="https://web.dev/static/articles/script-evaluation-and-long-tasks/image/module-compilation-in-mu-724bec674b5df_960.png"
@@ -54,7 +68,9 @@ const ScriptEvaluation = () => {
           <p>在 Safari 和 Firefox 中，每個模組都會啟動一個 evaluate 的 task</p>
         </section>
         <section>
-          <h4>透過 import() 動態載入 script</h4>
+          <h4 id="loading_scripts_with_dynamic_import">
+            透過 import() 動態載入 script
+          </h4>
           <p>
             使用 <code>import()</code> 動態載入的優點有
           </p>
@@ -70,7 +86,9 @@ const ScriptEvaluation = () => {
           </ol>
         </section>
         <section>
-          <h4>在 web worker 中載入 script</h4>
+          <h4 id="loading_scripts_in_a_web_worker">
+            在 web worker 中載入 script
+          </h4>
           <p>
             在 web worker 中載入與執行程式碼，會在 web worker 的 thread
             上執行，而不會占用 main thread，減少 main thread 的壅塞
@@ -78,13 +96,13 @@ const ScriptEvaluation = () => {
         </section>
       </section>
       <section>
-        <h3>取捨與注意事項</h3>
+        <h3 id="trade-offs_and_considerations">取捨與注意事項</h3>
         <section>
-          <h4>壓縮效率</h4>
+          <h4 id="compression_efficiency">壓縮效率</h4>
           <p>script 檔案愈大，壓縮效率愈好，script 較小，則壓縮效率會降低</p>
         </section>
         <section>
-          <h4>快取撤銷</h4>
+          <h4 id="cache_invalidation">快取撤銷</h4>
           <p>
             script
             檔案愈大，快取愈容易因為程式碼的改動而被撤銷。分割指令碼不僅使
@@ -93,7 +111,9 @@ const ScriptEvaluation = () => {
           </p>
         </section>
         <section>
-          <h4>巢狀 module 與載入效能</h4>
+          <h4 id="nested_modules_and_loading_performance">
+            巢狀 module 與載入效能
+          </h4>
           <p>使用巢狀的 module 時</p>
           <CodeBlock language="javascript">
             {`

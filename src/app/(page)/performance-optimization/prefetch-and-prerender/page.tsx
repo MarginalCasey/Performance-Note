@@ -3,13 +3,24 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Prefetch 和 Prerender",
+    description:
+      "Prefetch 近期所需的低優先度資源 | Prefetch 網頁以加快之後瀏覽的速度 | Prerender 頁面 | Service worker precaching",
+  };
+};
 
 const PrefetchAndPrerender = () => {
   return (
     <div>
       <h1>Prefetch 和 Prerender</h1>
-      <section id="prefetch">
-        <h3>Prefetch 近期所需的低優先度資源</h3>
+      <section>
+        <h3 id="prefetch_resources_needed_in_the_near_future_at_low_priority">
+          Prefetch 近期所需的低優先度資源
+        </h3>
         <p>
           使用 <code>{'<link rel="prefetch">'}</code>{" "}
           提示可以預先拿取資源，包括圖片、CSS 或 JavaScript。prefetch
@@ -31,7 +42,9 @@ const PrefetchAndPrerender = () => {
         </p>
       </section>
       <section>
-        <h3>Prefetch 網頁以加快之後瀏覽的速度</h3>
+        <h3 id="prefetch_pages_to_speed_up_future_navigations">
+          Prefetch 網頁以加快之後瀏覽的速度
+        </h3>
         <p>
           可以對 HTML 文件指定 <code>as=&quot;document&quot;</code> 屬性，藉此
           prefetch 網頁及其所有子資源
@@ -102,7 +115,7 @@ const PrefetchAndPrerender = () => {
         </section>
       </section>
       <section>
-        <h3>Prerender 頁面</h3>
+        <h3 id="prerender_pages">Prerender 頁面</h3>
         <p>
           除了 prefetch 資源以外，也可提示瀏覽器在使用者造訪頁面前先行 prerender
           頁面，這麼做可以提供近乎即時的頁面載入，因為系統會在背景拿取及處理頁面及其資源。使用者前往該頁面後，頁面就會置於前景。
@@ -137,7 +150,7 @@ const PrefetchAndPrerender = () => {
         </Alert>
       </section>
       <section>
-        <h3>Service worker precaching</h3>
+        <h3 id="service_worker_precaching">Service worker precaching</h3>
         <p>
           Service worker 像是一個 proxy server，允許修改 request 跟
           response，將其替換成 cache 儲存的內容。Service worker 使用{" "}

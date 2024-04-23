@@ -2,13 +2,21 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Interaction to Next Paint (INP)",
+    description: "什麼是 INP | 優化 INP",
+  };
+};
 
 const INP = () => {
   return (
     <div>
       <h1>Interaction to Next Paint (INP)</h1>
       <section>
-        <h3>什麼是 INP</h3>
+        <h3 id="what-is-inp">什麼是 INP</h3>
         <section>
           <p>
             INP
@@ -17,7 +25,7 @@ const INP = () => {
           </p>
         </section>
         <section>
-          <h4>怎樣算是一個良好的 INP 分數</h4>
+          <h4 id="good-score">怎樣算是一個良好的 INP 分數</h4>
           <p>
             為了提供良好的使用者體驗，網站應力求不超過 <b>200ms</b> 的
             INP，評估門檻是網頁載入的<b>第 75 個百分位數</b>
@@ -28,7 +36,7 @@ const INP = () => {
           />
         </section>
         <section>
-          <h4>互動是什麼</h4>
+          <h4 id="whats_in_an_interaction">互動是什麼</h4>
           <p>
             輸入延遲時間 (Input delay) + 處理時間 (Processing time) +
             顯示延遲時間 (Presentation delay)
@@ -56,7 +64,7 @@ const INP = () => {
           </p>
         </section>
         <section>
-          <h4>INP 與 First Input Delay (FID) 有何不同</h4>
+          <h4 id="inp-vs-fid">INP 與 First Input Delay (FID) 有何不同</h4>
           <p>
             INP 將所有的頁面互動納入考量，但 FID 只會計算最初的互動。FID
             只會計算最初的互動的 input delay，不包含 event handler
@@ -65,7 +73,7 @@ const INP = () => {
         </section>
       </section>
       <section>
-        <h3>優化 INP</h3>
+        <h3 id="optimize-inp">優化 INP</h3>
         <section>
           <p>互動可分為三個階段</p>
           <ol>
@@ -89,7 +97,7 @@ const INP = () => {
             這三個階段的總和就是總互動延遲時間。互動的每一個階段都會造成總互動延遲的時間。
           </p>
           <section>
-            <h4>辨別並縮短輸入延遲時間</h4>
+            <h4 id="identify_and_reduce_input_delay">辨別並縮短輸入延遲時間</h4>
             <ul>
               <li>
                 避免使用週期性計時器，導致過度使用主執行緒
@@ -142,7 +150,7 @@ const INP = () => {
             </InternalLink>
           </section>
           <section>
-            <h4>優化 event callback</h4>
+            <h4 id="optimize_event_callbacks">優化 event callback</h4>
             <ul>
               <li>
                 頻繁地讓出 main thread
@@ -220,7 +228,7 @@ const INP = () => {
             </ul>
           </section>
           <section>
-            <h4>盡可能縮短顯示延遲時間</h4>
+            <h4 id="minimize_presentation_delay">盡可能縮短顯示延遲時間</h4>
             <ul>
               <li>
                 最小化 DOM

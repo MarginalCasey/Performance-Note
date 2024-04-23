@@ -3,13 +3,21 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Largest Contentful Paint (LCP)",
+    description: "什麼是 LCP | 優化 LCP",
+  };
+};
 
 const LCP = () => {
   return (
     <div>
       <h1>Largest Contentful Paint (LCP)</h1>
       <section>
-        <h3>什麼是 LCP</h3>
+        <h3 id="what-is-lcp">什麼是 LCP</h3>
         <section>
           <p>
             LCP
@@ -21,7 +29,7 @@ const LCP = () => {
           </Alert>
         </section>
         <section>
-          <h4>怎樣算是一個良好的 LCP 分數</h4>
+          <h4 id="what-is-a-good-lcp-score">怎樣算是一個良好的 LCP 分數</h4>
           <p>
             為了提供良好的使用者體驗，網站應力求 LCP <b>2.5 秒</b>
             以下，評估門檻是網頁載入的<b>第 75 個百分位數</b>
@@ -32,7 +40,7 @@ const LCP = () => {
           />
         </section>
         <section>
-          <h4 id="element">哪些元素會列入考量</h4>
+          <h4 id="what-elements-are-considered">哪些元素會列入考量</h4>
           <ul>
             <li>
               包含文字節點或是其他行內文字元素的區塊元素
@@ -79,7 +87,7 @@ const LCP = () => {
           </ul>
         </section>
         <section>
-          <h4>元素的大小如何被決定</h4>
+          <h4 id="how-is-element-size-determined">元素的大小如何被決定</h4>
           <p>
             LCP
             回報的元素大小，通常是使用者在可視區域中可看見的大小。如果元素超出可視區域範圍，或是元素遭到裁剪或出現不可見的
@@ -97,7 +105,7 @@ const LCP = () => {
           <p>所有元素都不會考慮透過 CSS 套用的 margin, padding, border。</p>
         </section>
         <section>
-          <h4>何時會回報 LCP</h4>
+          <h4 id="when-is-lcp-reported">何時會回報 LCP</h4>
           <p>
             網頁通常會分階段載入，因此網頁上最大的元素可能會改變。為處理可能的變動，瀏覽器會在瀏覽器繪製第一個
             frame 後，立即 dispatch 一個 type{" "}
@@ -130,15 +138,17 @@ const LCP = () => {
           </p>
         </section>
         <section>
-          <h4>如何處理元素版面配置和大小的變動</h4>
+          <h4 id="how-are-element-layout-size-changes-handled">
+            如何處理元素版面配置和大小的變動
+          </h4>
           <p>
             變更元素的大小或位置並不會產生新的 LCP
             候選項目。系統只會考量元素的初始大小和可視區域中的位置。這表示一開始在可視區域外但後來被移進可視區域的圖片不會被考慮進去。這也代表一開始在可視區域內但隨後被擠到下方的元素，仍會回報在初始可視區域中的大小。
           </p>
         </section>
         <section>
-          <h4>如何測量 LCP</h4>
-          <h5>Field tools</h5>
+          <h4 id="how-to-measure-lcp">如何測量 LCP</h4>
+          <h5 id="field-tools">Field tools</h5>
           <ul>
             <li>
               <ExternalLink href="https://developer.chrome.com/docs/crux/">
@@ -161,7 +171,7 @@ const LCP = () => {
               </ExternalLink>
             </li>
           </ul>
-          <h5>Lab tools</h5>
+          <h5 id="lab-tools">Lab tools</h5>
           <ul>
             <li>
               <ExternalLink href="https://developer.chrome.com/docs/devtools/">
@@ -187,9 +197,9 @@ const LCP = () => {
         </section>
       </section>
       <section>
-        <h3>優化 LCP</h3>
+        <h3 id="optimize-lcp">優化 LCP</h3>
         <section>
-          <h4>拆解 LCP</h4>
+          <h4 id="lcp_breakdown">拆解 LCP</h4>
           <p>想要優化 LCP 主要可以從兩個地方開始</p>
           <ol>
             <li>一開始的 HTML</li>
@@ -229,7 +239,7 @@ const LCP = () => {
           </p>
         </section>
         <section>
-          <h4>如何優化各個部分</h4>
+          <h4 id="how-to-optimize-each-part">如何優化各個部分</h4>
           <ol>
             <li>
               移除 Resource load delay
@@ -551,7 +561,7 @@ const LCP = () => {
                   <p>
                     除了縮減資源大小以外，也可以讓伺服器盡可能靠近使用者，從而縮短載入時間。最佳做法是使用
                     <InternalLink
-                      href={`${PERFORMANCE_OPTIMIZATION.HTML.PATH}#cdn`}
+                      href={`${PERFORMANCE_OPTIMIZATION.HTML.PATH}#content_delivery_networks_cdns`}
                     >
                       CDN
                     </InternalLink>

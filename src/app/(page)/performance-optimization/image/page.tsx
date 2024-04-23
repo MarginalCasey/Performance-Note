@@ -2,13 +2,22 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "圖片最佳化",
+    description:
+      "檔案格式 | 圖片尺寸 | <picture> | 根據 Accept request header 提供圖片 | Lazy loading | decoding 屬性",
+  };
+};
 
 const Image = () => {
   return (
     <div>
       <h1>圖片最佳化</h1>
       <section>
-        <h3>檔案格式</h3>
+        <h3 id="file_formats">檔案格式</h3>
         <table className="mt-2 text-sm">
           <tbody>
             <tr>
@@ -54,9 +63,9 @@ const Image = () => {
         </table>
       </section>
       <section>
-        <h3>圖片尺寸</h3>
+        <h3 id="image_size">圖片尺寸</h3>
         <section>
-          <h4>srcset</h4>
+          <h4 id="srcset">srcset</h4>
           <p>
             一個或多組由逗號所分隔的字串，用來表示可能的圖片來源，每組字串包含
           </p>
@@ -75,7 +84,7 @@ const Image = () => {
           </ol>
         </section>
         <section>
-          <h4>sizes</h4>
+          <h4 id="sizes">sizes</h4>
           <p>一個或多組由逗號所分隔的字串，用來表示圖片的尺寸，每組字串包含</p>
           <ol>
             <li>一個 media condition (最後一組一定是空的)</li>
@@ -83,7 +92,7 @@ const Image = () => {
           </ol>
         </section>
         <section>
-          <h4>範例</h4>
+          <h4 id="image_example">範例</h4>
           <p>
             不同 DPR 時載入不同尺寸的圖片{" "}
             <InternalLink href={PERFORMANCE_OPTIMIZATION.IMAGE.DPR_DEMO.PATH}>
@@ -119,7 +128,7 @@ const Image = () => {
         </section>
       </section>
       <section>
-        <h3>{"<picture>"}</h3>
+        <h3 id="the_picture_element">{"<picture>"}</h3>
         <p>
           包含了 ≥ 0 個 <code>{"<source>"}</code> 以及一個{" "}
           <code>{"<img>"}</code>{" "}
@@ -130,7 +139,7 @@ const Image = () => {
           source，或是顯示預設的圖片
         </p>
         <section>
-          <h4>範例</h4>
+          <h4 id="picture_example">範例</h4>
           <p>
             根據 media 載入不同尺寸的圖片{" "}
             <InternalLink
@@ -188,7 +197,9 @@ const Image = () => {
         </section>
       </section>
       <section>
-        <h3>根據 Accept request header 提供圖片</h3>
+        <h3 id="serve_images_based_on_the_accept_request_header">
+          根據 Accept request header 提供圖片
+        </h3>
         <p>
           Accept HTTP request header
           會告知伺服器使用者瀏覽器可理解的內容類型，伺服器可使用這項資訊提供最佳圖片格式
@@ -207,8 +218,8 @@ const Image = () => {
           `}
         </CodeBlock>
       </section>
-      <section id="lazy-load">
-        <h3>Lazy loading</h3>
+      <section>
+        <h3 id="lazy-load">Lazy loading</h3>
         <p>
           <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/loading">
             <code>loading</code>
@@ -234,7 +245,7 @@ const Image = () => {
         </ul>
       </section>
       <section>
-        <h3>decoding 屬性</h3>
+        <h3 id="decoding">decoding 屬性</h3>
         <p>
           <ExternalLink href="https://developer.mozilla.org/en-US/docs/Web/API/HTMLImageElement/decoding">
             <code>decoding</code>

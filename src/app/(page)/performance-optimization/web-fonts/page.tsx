@@ -3,13 +3,21 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Web fonts 最佳化",
+    description: "發現 | 下載 | 渲染",
+  };
+};
 
 const WebFonts = () => {
   return (
     <div>
       <h1>Web fonts 最佳化</h1>
       <section>
-        <h3>發現</h3>
+        <h3 id="discovery">發現</h3>
         <p>
           我們在 CSS 中使用 <code>@font-face</code> 來定義 web font
         </p>
@@ -34,7 +42,7 @@ const WebFonts = () => {
           alt=""
         />
         <section>
-          <h4>Inline @font-face</h4>
+          <h4 id="inline_font-face_declarations">Inline @font-face</h4>
           <p>
             在 <code>{"<head>"}</code> 使用 <code>{"<style>"}</code> 去 inline{" "}
             <code>@font-face</code> 可以讓瀏覽器更早發現字型
@@ -60,8 +68,8 @@ const WebFonts = () => {
             non-render blocking 方式下載，不然一樣都得等其他 CSS 先下載完成
           </p>
         </section>
-        <section id="preload">
-          <h4>preload</h4>
+        <section>
+          <h4 id="preload">preload</h4>
           <p>
             使用{" "}
             <InternalLink
@@ -84,9 +92,9 @@ const WebFonts = () => {
         </section>
       </section>
       <section>
-        <h3>下載</h3>
+        <h3 id="download">下載</h3>
         <section>
-          <h4>自己 host web fonts</h4>
+          <h4 id="self-host_your_web_fonts">自己 host web fonts</h4>
           <p>
             Web fonts
             可以由第三方服務提供，也可以自行管理來源。使用第三方服務時，可以透過
@@ -107,7 +115,7 @@ const WebFonts = () => {
           </p>
         </section>
         <section>
-          <h4>僅使用 WOFF2</h4>
+          <h4 id="use_woff2—and_woff2_only">僅使用 WOFF2</h4>
           <p>
             WOFF2
             具備廣泛的瀏覽器支援和最佳壓縮功能。只有在需要支援舊版瀏覽器時，才需要使用其他格式
@@ -115,7 +123,7 @@ const WebFonts = () => {
           </p>
         </section>
         <section>
-          <h4>子集</h4>
+          <h4 id="subset_your_web_fonts">子集</h4>
           <p>
             Web fonts 通常包含多種不同的
             <ExternalLink href="https://zh.wikipedia.org/wiki/%E5%AD%97%E5%BD%A2">
@@ -146,7 +154,7 @@ const WebFonts = () => {
         </section>
       </section>
       <section>
-        <h3>渲染</h3>
+        <h3 id="font_rendering">渲染</h3>
         <p>
           <code>@font-face</code> 中的 <code>font-display</code>{" "}
           屬性決定在字型下載完畢前如何顯示
@@ -173,8 +181,8 @@ const WebFonts = () => {
             </li>
           </ol>
         </section>
-        <section id="font-display">
-          <h4>font-display 屬性值</h4>
+        <section>
+          <h4 id="font-display">font-display 屬性值</h4>
           <ul>
             <li>
               auto

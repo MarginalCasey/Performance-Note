@@ -2,6 +2,15 @@ import Alert from "@/app/components/Alert";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "Lazy load",
+    description:
+      "延遲載入圖片 | 延遲載入 iframe | JavaScript 的延遲載入 libraries",
+  };
+};
 
 const LazyLoad = () => {
   return (
@@ -25,7 +34,7 @@ const LazyLoad = () => {
         process，這可能會導致網頁對使用者輸入內容的回應速度降低
       </p>
       <section>
-        <h3>延遲載入圖片</h3>
+        <h3 id="lazy_load_images_with_the_loading_attribute">延遲載入圖片</h3>
         <p>
           <code>{"<img>"}</code> 的{" "}
           <InternalLink
@@ -48,13 +57,13 @@ const LazyLoad = () => {
         </Alert>
       </section>
       <section>
-        <h3>延遲載入 iframe</h3>
+        <h3 id="lazy_load_iframe_elements">延遲載入 iframe</h3>
         <p>
           <code>{"<iframe>"}</code> 一樣可以透過 loading
           屬性設定瀏覽器該如何載入
         </p>
         <section>
-          <h4>Facades</h4>
+          <h4 id="facades">Facades</h4>
           <p>
             為了避免在頁面載入時就直接開始載入
             iframe。先顯示一個靜態圖片或是其他 HTML
@@ -68,7 +77,9 @@ const LazyLoad = () => {
         </section>
       </section>
       <section>
-        <h3>JavaScript 的延遲載入 libraries</h3>
+        <h3 id="javascript_lazy_loading_libraries">
+          JavaScript 的延遲載入 libraries
+        </h3>
         <p>如果需要延遲載入</p>
         <ul>
           <li>

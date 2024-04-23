@@ -3,13 +3,22 @@ import CodeBlock from "@/app/components/CodeBlock";
 import ExternalLink from "@/app/components/ExternalLink";
 import InternalLink from "@/app/components/InternalLink";
 import { CORE_WEB_VITALS, PERFORMANCE_OPTIMIZATION } from "@/app/path";
+import type { Metadata } from "next";
+
+export const generateMetadata = (): Metadata => {
+  return {
+    title: "為瀏覽器提供 resource hint",
+    description:
+      "preconnect | dns-prefetch | preload | prefetch | Fetch Priority API",
+  };
+};
 
 const ResourceHint = () => {
   return (
     <div>
       <h1>為瀏覽器提供 resource hint</h1>
-      <section id="preconnect">
-        <h3>preconnect</h3>
+      <section>
+        <h3 id="preconnect">preconnect</h3>
         <p>
           預期瀏覽器將會連線至特定的 cross origin 伺服器，在等待 HTML parser 或
           preload scanner 進行作業之前，與拿取重要資源的 origin 與建立連線
@@ -47,7 +56,7 @@ const ResourceHint = () => {
         </p>
       </section>
       <section>
-        <h3>dns-prefetch</h3>
+        <h3 id="dns-prefetch">dns-prefetch</h3>
         <p>
           相較於 <code>preconnect</code> 來說成本較低的提示。
           <code>dns-prefetch</code> 不會與 cross origin
@@ -69,8 +78,8 @@ const ResourceHint = () => {
           提示插入 HTML 的服務
         </p>
       </section>
-      <section id="preload">
-        <h3>preload</h3>
+      <section>
+        <h3 id="preload">preload</h3>
         <p>
           <code>preload</code> 指令的用途是對渲染頁面所需的資源發出提前請求
         </p>
@@ -125,9 +134,9 @@ const ResourceHint = () => {
         </Alert>
       </section>
       <section>
-        <h3>
+        <h3 id="prefetch">
           <InternalLink
-            href={`${PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER.PATH}#prefetch`}
+            href={`${PERFORMANCE_OPTIMIZATION.PREFETCH_AND_PRERENDER.PATH}#prefetch_resources_needed_in_the_near_future_at_low_priority`}
           >
             prefetch
           </InternalLink>
@@ -149,8 +158,8 @@ const ResourceHint = () => {
           渲染頁面所需的關鍵資源有助於縮短載入時間
         </p>
       </section>
-      <section id="fetchpriority">
-        <h3>Fetch Priority API</h3>
+      <section>
+        <h3 id="fetchpriority">Fetch Priority API</h3>
         <p>
           使用 <code>fetchpriority</code> 可以調整 <code>{"<link>"}</code>{" "}
           <code>{"<img>"}</code> <code>{"<script>"}</code> 的載入優先順序
