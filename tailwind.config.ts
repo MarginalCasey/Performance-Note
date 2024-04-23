@@ -8,6 +8,11 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    extend: {
+      screens: {
+        "3xl": "1525px",
+      },
+    },
     fontFamily: {
       sans: [
         "ui-sans-serif",

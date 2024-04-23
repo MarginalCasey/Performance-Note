@@ -1,3 +1,4 @@
+import TableOfContent from "@/app/components/TableOfContent";
 import "@/app/globals.css";
 import Sidebar from "@/app/layout/Sidebar";
 import { Analytics } from "@vercel/analytics/react";
@@ -19,6 +20,7 @@ export default function RootLayout({
           <Sidebar />
           <main className="main">
             <article className="content">{children}</article>
+            <TableOfContent />
           </main>
         </div>
         <Analytics />
