@@ -1,6 +1,6 @@
 import "@/app/globals.css";
+import Common from "@/app/layout/Common";
 import Sidebar from "@/app/layout/Sidebar";
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -19,7 +19,7 @@ export default function RootLayout({
           <Sidebar />
           {children}
         </div>
-        <Analytics />
+        <Common />
       </body>
     </html>
   );

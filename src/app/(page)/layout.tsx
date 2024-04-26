@@ -1,7 +1,7 @@
 import TableOfContent from "@/app/components/TableOfContent";
 import "@/app/globals.css";
+import Common from "@/app/layout/Common";
 import Sidebar from "@/app/layout/Sidebar";
-import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -24,7 +24,7 @@ export default function RootLayout({
             <TableOfContent />
           </main>
         </div>
-        <Analytics />
+        <Common />
       </body>
     </html>
   );
